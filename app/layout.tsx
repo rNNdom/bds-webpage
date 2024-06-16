@@ -1,27 +1,24 @@
-import type { Metadata } from 'next'
-import { Inter as FontSans } from 'next/font/google'
 import { ThemeProvider } from '@/components/theme/theme-provider'
+import type { Metadata } from 'next'
 
 import './globals.css'
 
-import { Button } from '@/components/ui/button'
+import { Container, Main, Section } from '@/components/craft'
 import { MobileNav } from '@/components/nav/mobile-nav'
-import { ThemeToggle } from '@/components/theme/theme-toggle'
-import { Main } from '@/components/craft'
-import { mainMenu, contentMenu } from '@/menu.config'
-import { Section, Container } from '@/components/craft'
+import { Button } from '@/components/ui/button'
+import { contentMenu, mainMenu } from '@/menu.config'
 import Balancer from 'react-wrap-balancer'
 
-import Logo from '@/public/logo.svg'
-
+import BDS4 from '@/public/BDS4.png'
 import Image from 'next/image'
 import Link from 'next/link'
 
 import { cn } from '@/lib/utils'
+import { Roboto } from 'next/font/google'
 
-const fontSans = FontSans({
-  subsets: ['latin'],
-  variable: '--font-sans'
+const roboto = Roboto({
+  weight: ['100', '300', '400', '500', '700', '900'],
+  subsets: ['latin']
 })
 
 export const metadata: Metadata = {
@@ -30,14 +27,11 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://wp.9d8.dev')
 }
 
-// Revalidate content every hour
-export const revalidate = 3600
-
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang='en' suppressHydrationWarning>
       <head />
-      <body className={cn('min-h-screen font-sans antialiased', fontSans.variable)}>
+      <body className={cn('min-h-screen antialiased', roboto.className)}>
         <ThemeProvider attribute='class' defaultTheme='light'>
           <Nav />
           <Main>{children}</Main>
@@ -51,22 +45,22 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 const Nav = ({ className, children, id }: NavProps) => {
   return (
     <nav className={cn('sticky z-50 top-0 bg-background', 'border-b', 'fade-in', className)} id={id}>
-      <div id='nav-container' className='max-w-5xl mx-auto py-4 px-6 sm:px-8 flex justify-between items-center'>
+      <div id='nav-container' className='max-w-5xl mx-auto px-6 sm:px-8 flex justify-between items-center'>
         <Link className='hover:opacity-75 transition-all flex gap-2 items-center' href='/'>
           <h2 className='sr-only'>next-wp starter</h2>
-          <Image src={Logo} alt='Logo' className='dark:invert' width={84} height={30.54}></Image>
+          <Image src={BDS4} alt='Logo' className='dark:invert object-cover w-44 h-20'></Image>
         </Link>
         {children}
-        <div className='flex items-center gap-2'>
-          <div className='mx-2 hidden md:flex'>
+        <div className='flex items-center gap-2 '>
+          <div className='mx-14 hidden md:flex gap-10 '>
             {Object.entries(mainMenu).map(([key, href]) => (
-              <Button key={href} asChild variant='ghost' size='sm'>
+              <Button key={href} asChild className='text-lg' variant='ghost'>
                 <Link href={href}>{key.charAt(0).toUpperCase() + key.slice(1)}</Link>
               </Button>
             ))}
           </div>
-          <Button asChild className='hidden sm:flex'>
-            <Link href='https://9d8.dev'>Get Started</Link>
+          <Button asChild className='hidden sm:flex bg-buttonTealColor font-semibold text-md'>
+            <Link href='https://9d8.dev'>Contáctanos</Link>
           </Button>
           <MobileNav />
         </div>
@@ -83,7 +77,7 @@ const Footer = () => {
           <div className='flex flex-col gap-6 not-prose'>
             <Link href='/'>
               <h3 className='sr-only'>brijr/components</h3>
-              <Image src={Logo} alt='Logo' width={120} height={27.27} className='dark:invert hover:opacity-75 transition-all'></Image>
+              <Image src={BDS4} alt='Logo' width={120} height={27.27} className='dark:invert hover:opacity-75 transition-all'></Image>
             </Link>
             <p>
               <Balancer>{metadata.description}</Balancer>
@@ -107,7 +101,7 @@ const Footer = () => {
           </div>
         </Container>
         <Container className='border-t not-prose flex flex-col md:flex-row md:gap-2 gap-6 justify-between md:items-center'>
-          <ThemeToggle />
+          {/* <ThemeToggle /> */}
           <p className='text-muted-foreground'>
             © <a href='https://9d8.dev'>9d8</a>. All rights reserved. 2024-present.
           </p>
