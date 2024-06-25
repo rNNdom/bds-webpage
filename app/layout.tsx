@@ -6,7 +6,7 @@ import './globals.css'
 import { Container, Main, Section } from '@/components/craft'
 import { MobileNav } from '@/components/nav/mobile-nav'
 import { Button } from '@/components/ui/button'
-import { contentMenu, mainMenu } from '@/menu.config'
+import { mainMenu } from '@/menu.config'
 import Balancer from 'react-wrap-balancer'
 
 import BDS4 from '@/public/BDS4.png'
@@ -86,14 +86,6 @@ const Footer = () => {
           <div className='flex flex-col gap-2 text-sm'>
             <h5 className='font-medium text-base'>Website</h5>
             {Object.entries(mainMenu).map(([key, href]) => (
-              <Link className='hover:underline underline-offset-4' key={href} href={href}>
-                {key.charAt(0).toUpperCase() + key.slice(1)}
-              </Link>
-            ))}
-          </div>
-          <div className='flex flex-col gap-2 text-sm'>
-            <h5 className='font-medium text-base'>Blog</h5>
-            {Object.entries(contentMenu).map(([key, href]) => (
               <Link className='hover:underline underline-offset-4' key={href} href={href}>
                 {key.charAt(0).toUpperCase() + key.slice(1)}
               </Link>

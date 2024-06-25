@@ -19,7 +19,7 @@ const config = {
       },
       colors: {
         buttonTealColor: '#75c5c2',
-        premiseSection: '#EFF5F5',
+        lightGreenBackground: '#EFF5F5',
         oxfordBlue: '#182440',
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
