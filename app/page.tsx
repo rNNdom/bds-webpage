@@ -1,4 +1,5 @@
 // Craft Imports
+import { ClientsSection } from '@/components/ClientsSection'
 import { Container, Section } from '@/components/craft'
 
 // Components
@@ -17,7 +18,7 @@ export default function Home() {
         </Container>
       </Section>
 
-      <Section className='bg-lightGreenBackground text-oxfordBlue '>
+      <Section className='bg-lightGreenBackground text-oxfordBlue not-prose'>
         <Container className='text-center sm:p-2'>
           <p className='text-xl items-center '>
             Desde el año 2013 hemos estado brindando apoyo a clientes en los sectores de <strong>banca, retail e inmobiliaria</strong>. Nuestro equipo está capacitado para brindar el apoyo que
@@ -38,8 +39,14 @@ export default function Home() {
       </Section>
 
       <Section className='md:pt-0 text-oxfordBlue'>
-        <Container className='max-w-max'>
+        <Container className='max-w-7xl'>
           <MainServices />
+        </Container>
+      </Section>
+
+      <Section className='text-oxfordBlue bg-lightGreenBackground '>
+        <Container>
+          <ClientsSection />
         </Container>
       </Section>
     </Section>

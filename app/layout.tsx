@@ -22,8 +22,8 @@ const roboto = Roboto({
 })
 
 export const metadata: Metadata = {
-  title: 'WordPress/Next.js Starter by 9d8',
-  description: 'A starter template for Next.js with WordPress as a headless CMS.',
+  title: 'BDS SpA',
+  description: 'Consultora BDS Chile 2024, expertos en Business Intelligence, Big Data.',
   metadataBase: new URL('https://wp.9d8.dev')
 }
 
@@ -75,18 +75,20 @@ const Footer = () => {
       <Section>
         <Container className='grid md:grid-cols-[1.5fr_0.5fr_0.5fr] gap-12'>
           <div className='flex flex-col gap-6 not-prose'>
-            <Link href='/'>
-              <h3 className='sr-only'>brijr/components</h3>
-              <Image src={BDS4} alt='Logo' width={120} height={27.27} className='dark:invert hover:opacity-75 transition-all'></Image>
+            <Link className='flex w-fit' href='/'>
+              <Image src={BDS4} alt='Logo' width={120} height={27.27} className='dark:invert hover:opacity-75 transition-all' />
             </Link>
-            <p>
+            <p className='font-medium'>
+              <Balancer>{metadata.title}</Balancer>
+            </p>
+            <p className='text-muted-foreground'>
               <Balancer>{metadata.description}</Balancer>
             </p>
           </div>
           <div className='flex flex-col gap-2 text-sm'>
-            <h5 className='font-medium text-base'>Website</h5>
+            <h5 className='font-medium text-base pb-3'>Enlaces</h5>
             {Object.entries(mainMenu).map(([key, href]) => (
-              <Link className='hover:underline underline-offset-4' key={href} href={href}>
+              <Link className='hover:underline underline-offset-4 pb-2' key={href} href={href}>
                 {key.charAt(0).toUpperCase() + key.slice(1)}
               </Link>
             ))}
@@ -95,7 +97,7 @@ const Footer = () => {
         <Container className='border-t not-prose flex flex-col md:flex-row md:gap-2 gap-6 justify-between md:items-center'>
           {/* <ThemeToggle /> */}
           <p className='text-muted-foreground'>
-            © <a href='https://9d8.dev'>9d8</a>. All rights reserved. 2024-present.
+            © <a href='https://9d8.dev'>BDS SpA</a>. Todos los derechos reservados.
           </p>
         </Container>
       </Section>

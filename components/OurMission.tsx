@@ -6,7 +6,7 @@ import Image from 'next/image'
 import BDS4 from '@/public/BDS4.png'
 export default function OurMission() {
   return (
-    <Section className='md:pt-10 text-oxfordBlue pt-10 pb-0 md:pb-0'>
+    <Section className='text-oxfordBlue  md:pt-0 pb-0 md:pb-0 not-prose'>
       <Container className='text-center sm:p-2 not-prose'>
         <h3 className='text-4xl font-bold text-center pb-10'>
           <Balancer>Nuestra misión</Balancer>
@@ -16,15 +16,15 @@ export default function OurMission() {
           <span className='not-prose border rounded-full overflow-hidden flex '>
             <Image src={BDS4} alt='placeholder' className='fill object-cover bg-white ' width={350} height={350} />
           </span>
-          <Balancer>
-            <p className='text-xl '>
+          <p className='text-xl '>
+            <Balancer>
               En nuestro equipo, nos dedicamos a <strong>desbloquear el potencial de tus datos.</strong> Especializados en Business Intelligence y Big Data,
-              <strong>ofrecemos consultoría tanto a grandes corporaciones como a compañías pequeñas.</strong> Nuestro compromiso radica en aplicar nuestro profundo conocimiento y experiencia en
-              diversas tecnologías e industrias para así,
-              <strong>asegurar que nuestros clientes aprovechen al máximo sus datos, guiándolos hacia decisiones estratégicas acertadas que agreguen valor a sus operaciones.</strong> Estamos aquí para
-              impulsar el éxito de tu empresa, brindándote claridad y confianza en cada paso hacia el futuro.
-            </p>
-          </Balancer>
+              <strong> ofrecemos consultoría tanto a grandes corporaciones como a compañías pequeñas.</strong> <br /> <br />
+              Nuestro compromiso radica en aplicar nuestro profundo conocimiento y experiencia en diversas tecnologías e industrias para así,
+              <strong> asegurar que nuestros clientes aprovechen al máximo sus datos, guiándolos hacia decisiones estratégicas acertadas que agreguen valor a sus operaciones.</strong> <br /> Estamos
+              aquí para impulsar el éxito de tu empresa, brindándote claridad y confianza en cada paso hacia el futuro.
+            </Balancer>
+          </p>
         </div>
       </Container>
     </Section>
