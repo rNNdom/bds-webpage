@@ -1,4 +1,3 @@
-import { ThemeProvider } from '@/components/theme/theme-provider'
 import type { Metadata } from 'next'
 
 import './globals.css'
@@ -9,7 +8,9 @@ import { Button } from '@/components/ui/button'
 import { mainMenu } from '@/menu.config'
 import Balancer from 'react-wrap-balancer'
 
+import BDS3 from '@/public/BDS3.png'
 import BDS4 from '@/public/BDS4.png'
+
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -23,8 +24,7 @@ const roboto = Roboto({
 
 export const metadata: Metadata = {
   title: 'BDS SpA',
-  description: 'Consultora BDS Chile 2024, expertos en Business Intelligence, Big Data.',
-  metadataBase: new URL('https://wp.9d8.dev')
+  description: 'Consultora BDS Chile 2024, expertos en Business Intelligence, Big Data.'
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -32,11 +32,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang='en' suppressHydrationWarning>
       <head />
       <body className={cn('min-h-screen antialiased', roboto.className)}>
-        <ThemeProvider attribute='class' defaultTheme='light'>
-          <Nav />
-          <Main>{children}</Main>
-          <Footer />
-        </ThemeProvider>
+        <Nav />
+        <Main>{children}</Main>
+        <Footer />
       </body>
     </html>
   )
@@ -72,16 +70,16 @@ const Nav = ({ className, children, id }: NavProps) => {
 const Footer = () => {
   return (
     <footer>
-      <Section>
-        <Container className='grid md:grid-cols-[1.5fr_0.5fr_0.5fr] gap-12'>
+      <Section className='bg-footerBgColor text-gray-200 py-4 md:py-4'>
+        <Container className='grid md:grid-cols-[1.5fr_0.5fr_0.5fr] '>
           <div className='flex flex-col gap-6 not-prose'>
             <Link className='flex w-fit' href='/'>
-              <Image src={BDS4} alt='Logo' width={120} height={27.27} className='dark:invert hover:opacity-75 transition-all' />
+              <Image src={BDS3} alt='Logo' width={150} height={140} className='dark:invert hover:opacity-75 transition-all' />
             </Link>
-            <p className='font-medium'>
+            <p className='font-medium text-slate-400'>
               <Balancer>{metadata.title}</Balancer>
             </p>
-            <p className='text-muted-foreground'>
+            <p className='text-gray-200'>
               <Balancer>{metadata.description}</Balancer>
             </p>
           </div>
@@ -95,8 +93,7 @@ const Footer = () => {
           </div>
         </Container>
         <Container className='border-t not-prose flex flex-col md:flex-row md:gap-2 gap-6 justify-between md:items-center'>
-          {/* <ThemeToggle /> */}
-          <p className='text-muted-foreground'>
+          <p className='text-gray-200'>
             © <a href='https://9d8.dev'>BDS SpA</a>. Todos los derechos reservados.
           </p>
         </Container>

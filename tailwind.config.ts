@@ -20,7 +20,9 @@ const config = {
       colors: {
         buttonTealColor: '#75c5c2',
         lightGreenBackground: '#eef5f5',
+        lightGreenBackgroundHover: '#eef3f5',
         oxfordBlue: '#182440',
+        footerBgColor: '#1a212a',
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
         ring: 'hsl(var(--ring))',
