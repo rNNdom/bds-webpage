@@ -10,7 +10,6 @@ export default function page() {
           <OurServices />
         </Container>
       </Section>
-
       <Section className='md:pt-2 bg-white text-oxfordBlue pt-10'>
         <Container className=' sm:p-2  not-prose'>
           <ServicesList />
