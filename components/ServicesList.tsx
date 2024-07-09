@@ -1,22 +1,19 @@
-// React and Next.js imports
-import React from 'react'
-
-// Third-party library imports
-
-// UI component imports
+'use client'
+import React, { useEffect, useRef, useState } from 'react'
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion'
-
-// Custom components
 import { Section, Container } from '@/components/craft'
 import Image, { StaticImageData } from 'next/image'
 import BDS4 from '@/public/BDS4.png'
 import { Card } from './ui/card'
+
 type ServicesListProps = {
   image: StaticImageData
   title: string
   description: string
 }
+
 type ServicesType = {
+  id: string
   question: string
   description?: string
   image: StaticImageData
@@ -25,6 +22,7 @@ type ServicesType = {
 
 const Services: ServicesType[] = [
   {
+    id: 'data-services',
     question: 'Servicios de datos',
     description: 'Brindamos el mejor servicio y experiencia con nuestro servicio de datos hacia nuestros clientes. Confía en nuestra experiencia.',
     image: BDS4,
@@ -72,6 +70,7 @@ const Services: ServicesType[] = [
     ]
   },
   {
+    id: 'bigdata-services',
     question: 'Servicios de Big Data',
     description: 'Diseñamos e implementamos soluciones Big Data a la medida. Somos expertos en arquitecturas de Big Data.',
     image: BDS4,
@@ -89,6 +88,7 @@ const Services: ServicesType[] = [
     ]
   },
   {
+    id: 'software-services',
     question: 'Desarrollo de Software',
     description: 'Diseñamos e implementamos soluciones de software a la medida de nuestros clientes. Nos basamos en tecnología en la nube.',
     image: BDS4,
@@ -113,6 +113,7 @@ const Services: ServicesType[] = [
     ]
   },
   {
+    id: 'ia-data',
     question: 'Inteligencia artificial y automatización de procesos',
     description:
       'Diseñamos soluciones empresareiales basadas en los tópicos tecnológicos más recientes, usando inteligencia artificial (AI), aprendfizaje automático (ML) y automatización robótica de procesos (RPA).',
@@ -141,16 +142,55 @@ const Services: ServicesType[] = [
 ]
 
 const ServicesList = () => {
+  const [openAccordion, setOpenAccordion] = useState<string | null>(null)
+  const sectionRefs = useRef<{ [key: string]: HTMLElement | null }>({})
+
+  useEffect(() => {
+    const hash = window.location.hash.substring(1)
+    if (hash) {
+      setOpenAccordion(hash)
+      // Ajustar el desplazamiento después de un pequeño retraso para asegurar que el acordeón se haya abierto.
+      setTimeout(() => {
+        const element = sectionRefs.current[hash]
+        if (element) {
+          window.scrollTo({
+            top: element.getBoundingClientRect().top + window.scrollY - 100, // Ajusta el valor -100 según sea necesario
+            behavior: 'smooth'
+          })
+        }
+      }, 300)
+    }
+  }, [])
+
+  const handleAccordionToggle = (id: string) => {
+    setOpenAccordion((prev) => (prev === id ? null : id))
+  }
+
   return (
     <Section className='md:py-0 border-t'>
       <Container>
-        <div className=' mt-4 flex flex-col gap-4 md:mt-8'>
+        <div className='mt-4 flex flex-col gap-4 md:mt-8'>
           {Services.map((service, index) => (
-            <Accordion key={index} type='single' collapsible>
-              <AccordionItem value={service.question} className='rounded-md border bg-lightGreenBackground px-4 transition-all '>
-                <AccordionTrigger className='flex flex-row  hover:no-underline gap-10 '>
+            <Accordion
+              key={index}
+              type='single'
+              collapsible
+              id={service.id}
+              value={openAccordion === service.id ? service.question : ''}
+              onValueChange={(value) => {
+                setOpenAccordion(value ? service.id : null)
+              }}
+            >
+              <AccordionItem
+                value={service.question}
+                className='rounded-md border bg-lightGreenBackground px-4 transition-all'
+                ref={(element) => {
+                  sectionRefs.current[service.id] = element
+                }}
+              >
+                <AccordionTrigger className='flex flex-row hover:no-underline gap-10' onClick={() => handleAccordionToggle(service.id)}>
                   <Image src={service.image} alt={service.question} width={150} height={150} className='rounded-full' />
-                  <span className='flex flex-col gap-5 text-start '>
+                  <span className='flex flex-col gap-5 text-start'>
                     <p className='text-xl font-bold'>{service.question}</p>
                     <p className='font-normal'>{service.description}</p>
                   </span>
@@ -161,7 +201,6 @@ const ServicesList = () => {
                     {service.contentList.map((item, index) => (
                       <Card key={index} className='flex flex-row p-4 gap-4 items-center text-oxfordBlue m-3 my-10 border-0'>
                         <Image src={item.image} alt={item.title} width={120} height={120} className='rounded-full' />
-
                         <div className='p-3 pr-6 flex flex-grow flex-col'>
                           <p className='font-bold text-lg pb-4'>{item.title}</p>
                           <p className='text-lg'>{item.description}</p>
@@ -178,4 +217,5 @@ const ServicesList = () => {
     </Section>
   )
 }
+
 export default ServicesList

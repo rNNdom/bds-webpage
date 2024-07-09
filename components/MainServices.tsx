@@ -4,7 +4,7 @@ import Balancer from 'react-wrap-balancer'
 import Link from 'next/link'
 
 // Icons
-import { Coins, ArrowRight } from 'lucide-react'
+import { ArrowRight } from 'lucide-react'
 import Image from 'next/image'
 import BDS4 from '@/public/BDS4.png'
 
@@ -12,7 +12,7 @@ type FeatureText = {
   icon: JSX.Element
   title: string
   description: string
-  href?: string
+  href: string
   cta?: string
 }
 
@@ -20,28 +20,28 @@ const featureText: FeatureText[] = [
   {
     icon: <Image className='max-h-48 object-contain' src={BDS4} alt='placeholder1' />,
     title: 'Servicio de datos',
-    href: '/',
+    href: '/services#data-services',
     description: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
     cta: 'Ver más'
   },
   {
     icon: <Image className='max-h-48 object-contain' src={BDS4} alt='placeholder1' />,
     title: 'Desarrollo de Software',
-    href: '/',
+    href: '/services#software-services',
     description: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
     cta: 'Ver más'
   },
   {
     icon: <Image className='max-h-48 object-contain' src={BDS4} alt='placeholder1' />,
     title: 'ML, IA, RPA',
-    href: '/',
+    href: '/services#ia-data',
     description: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
     cta: 'Ver más'
   },
   {
     icon: <Image className='max-h-48 object-contain' src={BDS4} alt='placeholder1' />,
     title: 'Business Intelligence',
-    href: '/',
+    href: '/services#bigdata-services',
     description: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
     cta: 'Ver más'
   }
@@ -58,7 +58,7 @@ const MainServices = () => {
 
           <div className='mt-6 grid gap-6 md:mt-12 md:grid-cols-4'>
             {featureText.map(({ icon, title, description, href, cta }, index) => (
-              <Link href={`${href}`} className='flex flex-col justify-between gap-6 rounded-lg border p-6 transition-all items-center hover:-mt-2 hover:mb-2' key={index}>
+              <Link href={href} className='flex flex-col justify-between gap-6 rounded-lg border p-6 transition-all items-center hover:-mt-2 hover:mb-2' key={index}>
                 <div className='flex flex-col items-center gap-4 '>
                   <h4 className='font-semibold text-xl'>{title}</h4>
                   <span className='items-center justify-center '> {icon}</span>
