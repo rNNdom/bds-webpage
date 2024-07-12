@@ -1,48 +1,40 @@
 import type { Metadata } from 'next'
-import { Inter as FontSans } from 'next/font/google'
-import { ThemeProvider } from '@/components/theme/theme-provider'
 
 import './globals.css'
 
-import { Button } from '@/components/ui/button'
+import { Container, Main, Section } from '@/components/craft'
 import { MobileNav } from '@/components/nav/mobile-nav'
-import { ThemeToggle } from '@/components/theme/theme-toggle'
-import { Main } from '@/components/craft'
-import { mainMenu, contentMenu } from '@/menu.config'
-import { Section, Container } from '@/components/craft'
+import { Button } from '@/components/ui/button'
+import { mainMenu } from '@/menu.config'
 import Balancer from 'react-wrap-balancer'
 
-import Logo from '@/public/logo.svg'
+import BDS3 from '@/public/BDS3.png'
+import BDS4 from '@/public/BDS4.png'
 
 import Image from 'next/image'
 import Link from 'next/link'
 
 import { cn } from '@/lib/utils'
+import { Roboto } from 'next/font/google'
 
-const fontSans = FontSans({
-  subsets: ['latin'],
-  variable: '--font-sans'
+const roboto = Roboto({
+  weight: ['100', '300', '400', '500', '700', '900'],
+  subsets: ['latin']
 })
 
 export const metadata: Metadata = {
-  title: 'WordPress/Next.js Starter by 9d8',
-  description: 'A starter template for Next.js with WordPress as a headless CMS.',
-  metadataBase: new URL('https://wp.9d8.dev')
+  title: 'BDS SpA',
+  description: 'Consultora BDS Chile 2024, expertos en Business Intelligence, Big Data.'
 }
-
-// Revalidate content every hour
-export const revalidate = 3600
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang='en' suppressHydrationWarning>
       <head />
-      <body className={cn('min-h-screen font-sans antialiased', fontSans.variable)}>
-        <ThemeProvider attribute='class' defaultTheme='light'>
-          <Nav />
-          <Main>{children}</Main>
-          <Footer />
-        </ThemeProvider>
+      <body className={cn('min-h-screen antialiased', roboto.className)}>
+        <Nav />
+        <Main>{children}</Main>
+        <Footer />
       </body>
     </html>
   )
@@ -51,22 +43,22 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 const Nav = ({ className, children, id }: NavProps) => {
   return (
     <nav className={cn('sticky z-50 top-0 bg-background', 'border-b', 'fade-in', className)} id={id}>
-      <div id='nav-container' className='max-w-5xl mx-auto py-4 px-6 sm:px-8 flex justify-between items-center'>
+      <div id='nav-container' className='max-w-5xl mx-auto px-6 sm:px-8 flex justify-between items-center'>
         <Link className='hover:opacity-75 transition-all flex gap-2 items-center' href='/'>
           <h2 className='sr-only'>next-wp starter</h2>
-          <Image src={Logo} alt='Logo' className='dark:invert' width={84} height={30.54}></Image>
+          <Image src={BDS4} alt='Logo' className='dark:invert object-cover w-44 h-20'></Image>
         </Link>
         {children}
-        <div className='flex items-center gap-2'>
-          <div className='mx-2 hidden md:flex'>
+        <div className='flex items-center gap-2 '>
+          <div className='mx-14 hidden md:flex gap-10 '>
             {Object.entries(mainMenu).map(([key, href]) => (
-              <Button key={href} asChild variant='ghost' size='sm'>
+              <Button key={href} asChild className='text-lg' variant='ghost'>
                 <Link href={href}>{key.charAt(0).toUpperCase() + key.slice(1)}</Link>
               </Button>
             ))}
           </div>
-          <Button asChild className='hidden sm:flex'>
-            <Link href='https://9d8.dev'>Get Started</Link>
+          <Button asChild className='hidden sm:flex bg-buttonTealColor font-semibold text-md'>
+            <Link href='https://9d8.dev'>Contáctanos</Link>
           </Button>
           <MobileNav />
         </div>
@@ -78,38 +70,31 @@ const Nav = ({ className, children, id }: NavProps) => {
 const Footer = () => {
   return (
     <footer>
-      <Section>
-        <Container className='grid md:grid-cols-[1.5fr_0.5fr_0.5fr] gap-12'>
+      <Section className='bg-footerBgColor text-gray-200 py-4 md:py-4'>
+        <Container className='grid md:grid-cols-[1.5fr_0.5fr_0.5fr] '>
           <div className='flex flex-col gap-6 not-prose'>
-            <Link href='/'>
-              <h3 className='sr-only'>brijr/components</h3>
-              <Image src={Logo} alt='Logo' width={120} height={27.27} className='dark:invert hover:opacity-75 transition-all'></Image>
+            <Link className='flex w-fit' href='/'>
+              <Image src={BDS3} alt='Logo' width={150} height={140} className='dark:invert hover:opacity-75 transition-all' />
             </Link>
-            <p>
+            <p className='font-medium text-slate-400'>
+              <Balancer>{metadata.title}</Balancer>
+            </p>
+            <p className='text-gray-200'>
               <Balancer>{metadata.description}</Balancer>
             </p>
           </div>
           <div className='flex flex-col gap-2 text-sm'>
-            <h5 className='font-medium text-base'>Website</h5>
+            <h5 className='font-medium text-base pb-3'>Enlaces</h5>
             {Object.entries(mainMenu).map(([key, href]) => (
-              <Link className='hover:underline underline-offset-4' key={href} href={href}>
-                {key.charAt(0).toUpperCase() + key.slice(1)}
-              </Link>
-            ))}
-          </div>
-          <div className='flex flex-col gap-2 text-sm'>
-            <h5 className='font-medium text-base'>Blog</h5>
-            {Object.entries(contentMenu).map(([key, href]) => (
-              <Link className='hover:underline underline-offset-4' key={href} href={href}>
+              <Link className='hover:underline underline-offset-4 pb-2' key={href} href={href}>
                 {key.charAt(0).toUpperCase() + key.slice(1)}
               </Link>
             ))}
           </div>
         </Container>
         <Container className='border-t not-prose flex flex-col md:flex-row md:gap-2 gap-6 justify-between md:items-center'>
-          <ThemeToggle />
-          <p className='text-muted-foreground'>
-            © <a href='https://9d8.dev'>9d8</a>. All rights reserved. 2024-present.
+          <p className='text-gray-200'>
+            © <a href='https://9d8.dev'>BDS SpA</a>. Todos los derechos reservados.
           </p>
         </Container>
       </Section>
