@@ -9,8 +9,7 @@ import { mainMenu } from '@/menu.config'
 import Balancer from 'react-wrap-balancer'
 
 import BDS3 from '@/public/BDS3.png'
-import BDS4 from '@/public/BDS4.png'
-
+import BDSLOGO1 from '@/public/BDSLOGO1.png'
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -42,11 +41,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
 const Nav = ({ className, children, id }: NavProps) => {
   return (
-    <nav className={cn('sticky z-50 top-0 bg-background', 'border-b', 'fade-in', className)} id={id}>
-      <div id='nav-container' className='max-w-5xl mx-auto px-6 sm:px-8 flex justify-between items-center'>
-        <Link className='hover:opacity-75 transition-all flex gap-2 items-center' href='/'>
-          <h2 className='sr-only'>next-wp starter</h2>
-          <Image src={BDS4} alt='Logo' className='dark:invert object-cover w-44 h-20'></Image>
+    <nav className={cn('sticky z-50 top-0 bg-bgBlueColor border-bgBlueColor', 'border-b', 'fade-in', className)} id={id}>
+      <div id='nav-container' className='max-w-5xl mx-auto px-6 sm:px-8 flex justify-between items-center text-white'>
+        <Link className='hover:opacity-75 transition-all flex gap-2 items-center h-24' href='/'>
+          <Image src={BDSLOGO1} alt='Logo' className='object-contain p-1' width={166} height={166} />
         </Link>
         {children}
         <div className='flex items-center gap-2 '>
@@ -70,7 +68,7 @@ const Nav = ({ className, children, id }: NavProps) => {
 const Footer = () => {
   return (
     <footer>
-      <Section className='bg-footerBgColor text-gray-200 py-4 md:py-4'>
+      <Section className='bg-bds-background-gradient-1 bg-cover text-white py-4 md:py-4'>
         <Container className='grid md:grid-cols-[1.5fr_0.5fr_0.5fr] '>
           <div className='flex flex-col gap-6 not-prose'>
             <Link className='flex w-fit' href='/'>

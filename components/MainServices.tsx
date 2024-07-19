@@ -7,6 +7,7 @@ import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
 import Image from 'next/image'
 import BDS4 from '@/public/BDS4.png'
+import SectionTitle from './SectionTitle'
 
 type FeatureText = {
   icon: JSX.Element
@@ -49,16 +50,14 @@ const featureText: FeatureText[] = [
 
 const MainServices = () => {
   return (
-    <Craft.Section className='border-b '>
+    <Craft.Section className='relative z-10 '>
       <Craft.Container className='not-prose max-w-7xl'>
-        <div className='flex flex-col gap-6'>
-          <h3 className='text-4xl font-bold text-center'>
-            <Balancer>Principales Servicios</Balancer>
-          </h3>
+        <div className='flex flex-col gap-6 items-center'>
+          <SectionTitle>Principales Servicios</SectionTitle>
 
           <div className='mt-6 grid gap-6 md:mt-12 md:grid-cols-4'>
             {featureText.map(({ icon, title, description, href, cta }, index) => (
-              <Link href={href} className='flex flex-col justify-between gap-6 rounded-lg border p-6 transition-all items-center hover:-mt-2 hover:mb-2' key={index}>
+              <Link href={href} className='flex flex-col justify-between gap-6 rounded-lg border p-6 transition-all items-center hover:-mt-2 hover:mb-2 bg-white' key={index}>
                 <div className='flex flex-col items-center gap-4 '>
                   <h4 className='font-semibold text-xl'>{title}</h4>
                   <span className='items-center justify-center '> {icon}</span>

@@ -13,6 +13,7 @@ import Cardif from '@/public/cardif.jpg'
 import ADRetail from '@/public/ADRetail.png'
 import CE from '@/public/Logo Coordinador Electrico.png'
 import { count } from 'console'
+import SectionTitle from './SectionTitle'
 
 const carrouselItems = [
   {
@@ -67,7 +68,6 @@ export function ClientsSection() {
     if (!api) {
       return
     }
-    console.log(carrouselItems.length)
     setCount(carrouselItems.length)
     setCurrent(api.selectedScrollSnap() + 2)
 
@@ -77,18 +77,20 @@ export function ClientsSection() {
   }, [api])
 
   return (
-    <div className='relative w-full not-prose'>
-      <Carousel setApi={setApi} className='w-full'>
-        <h3 className='text-4xl font-bold text-center'>
-          <Balancer>Principales Clientes</Balancer>
-        </h3>
-        <CarouselPrevious />
-        <CarouselContent className='mt-6 md:mt-12'>
+    <div className='relative w-full z-10 pb-5 '>
+      <Carousel setApi={setApi} className='w-full flex flex-col items-center'>
+        <SectionTitle>Principales Clientes</SectionTitle>
+        <CarouselPrevious
+          style={{
+            backgroundColor: 'var(--background)'
+          }}
+        />
+        <CarouselContent className='mt-6 md:mt-12 '>
           {carrouselItems.map((item) => (
             <CarouselItem key={item.id} className='md:basis-1/3 sm:basis-2/12 pl-2'>
-              <div className='p-1'>
+              <div className='p-2 object-contain '>
                 <Card>
-                  <CardContent className='flex aspect-square items-center justify-center p-6 overflow-hidden flex-col'>
+                  <CardContent className='flex aspect-square items-center justify-center p-6 overflow-hidden flex-col '>
                     <span className='h-2/3 items-center flex justify-center'>
                       <Image src={item.image} alt={item.alt} className={item.style} />
                     </span>
@@ -101,17 +103,19 @@ export function ClientsSection() {
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselNext />
+        <CarouselNext
+          style={{
+            backgroundColor: 'var(--background)'
+          }}
+        />
       </Carousel>
-      <div className='absolute left-0 right-0 flex justify-center space-x-2 pt-5'>
+      <div className='absolute left-0 right-0 flex justify-center space-x-2 pt-7'>
         {Array.from({ length: count }).map((_, index) => (
-          <svg key={index} className={`w-3 h-3 ${current - 1 === index ? 'fill-current text-oxfordBlue' : 'fill-current text-gray-400'}`} viewBox='0 0 8 8'>
+          <svg key={index} className={`w-3 h-3 ${current - 1 === index ? 'fill-current text-oxfordBlue' : 'fill-current text-bgGreenColor'}`} viewBox='0 0 8 8'>
             <circle cx='4' cy='4' r='4' />
           </svg>
         ))}
       </div>
-      <div className='absolute top-0 left-0 w-20 h-full bg-gradient-to-r from-lightGreenBackground to-transparent pointer-events-none' />
-      <div className='absolute top-0 right-0 w-20 h-full bg-gradient-to-l from-lightGreenBackground to-transparent pointer-events-none' />
     </div>
   )
 }
