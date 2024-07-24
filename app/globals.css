@@ -125,15 +125,17 @@
 
   .circle {
     position: absolute;
-    background-color: #0d3b66;
-    color: white;
+    left: 48.7%;
+    margin-top: 15px;
+    background-color: #182440;
+    color: #91c4c0;
     border-radius: 50%;
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
     display: flex;
+    font-weight: 500;
     justify-content: center;
     align-items: center;
-    font-size: 1rem;
   }
 }
 

@@ -72,7 +72,7 @@ const Footer = () => {
         <Container className='grid md:grid-cols-[1.5fr_0.5fr_0.5fr] '>
           <div className='flex flex-col gap-6 not-prose'>
             <Link className='flex w-fit' href='/'>
-              <Image src={BDS3} alt='Logo' width={150} height={140} className='dark:invert hover:opacity-75 transition-all' />
+              <Image src={BDS3} alt='Logo' width={150} height={150} className='dark:invert hover:opacity-75 transition-all' />
             </Link>
             <p className='font-medium text-slate-400'>
               <Balancer>{metadata.title}</Balancer>
