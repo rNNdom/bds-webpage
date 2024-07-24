@@ -35,14 +35,14 @@ const MainServices = () => {
       <Craft.Container className='not-prose max-w-7xl'>
         <div className='flex flex-col gap-6 items-center'>
           <SectionTitle>Principales Servicios</SectionTitle>
-          <div ref={containerRef} className='relative flex p-4'>
-            <div className='left-services flex flex-col border-r-2 border-bgGreenColor pr-5 justify-between' style={{ height: containerHeight }}>
+          <div ref={containerRef} className='relative flex p-4 vertical-line '>
+            <div className='left-services flex flex-col  pr-5 justify-between' style={{ height: containerHeight }}>
               <div className='blank-space h-1/6' />
               <LeftServiceElement image={BigData} title='Big Data' description='Lorem ipsum dolor sit amet, consectetur adipis.' order={2} href='/services#bigdata-services' />
               <div className='blank-space h-1/6' />
               <LeftServiceElement image={SoftDev} title='Desarrollo de Software' description='Lorem ipsum dolor sit amet, consectetur adipis.' order={4} href='/services#software-services' />
             </div>
-            <div className='right-services flex flex-col border-l-2 border-bgGreenColor justify-between pl-5 ' style={{ height: containerHeight }}>
+            <div className='right-services flex flex-col justify-between pl-5 ' style={{ height: containerHeight }}>
               <RightServiceElement image={DataService} title='Servicio de Datos' description='Lorem ipsum dolor sit amet, consectetur adipis.' order={1} href='/services#data-services' />
               <div className='blank-space h-1/6' />
               <RightServiceElement image={ML} title='ML - IA - RPA' description='Lorem ipsum dolor sit amet, consectetur adipis.' order={3} href='/services#ia-data' />
