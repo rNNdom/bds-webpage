@@ -42,8 +42,8 @@ function ContactUs() {
     console.log(data, { ...data })
   }
   return (
-    <Section className='text-oxfordBlue  md:pt-0 pb-0 md:pb-0 not-prose '>
-      <Container className='text-center sm:p-2 not-prose'>
+    <Section className='text-oxfordBlue  md:pt-0 pb-0 md:pb-0 not-prose transition-all'>
+      <Container id='contact-form' className='text-center sm:p-2 not-prose'>
         <h3 className='text-4xl font-bold text-center pb-10'>
           <Balancer>Contáctanos</Balancer>
         </h3>

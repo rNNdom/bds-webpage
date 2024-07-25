@@ -55,8 +55,8 @@ const Nav = ({ className, children, id }: NavProps) => {
               </Button>
             ))}
           </div>
-          <Button asChild className='hidden sm:flex bg-buttonTealColor font-semibold text-md'>
-            <Link href='https://9d8.dev'>Contáctanos</Link>
+          <Button asChild className='hidden sm:flex bg-buttonTealColor font-semibold text-md transition-all hover:-mt-1 '>
+            <Link href='/about-us#contact-form'>Contáctanos</Link>
           </Button>
           <MobileNav />
         </div>
