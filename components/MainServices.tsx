@@ -1,79 +1,53 @@
+'use client'
 // Layout
 import * as Craft from '@/components/craft'
-import Balancer from 'react-wrap-balancer'
-import Link from 'next/link'
 
 // Icons
-import { ArrowRight } from 'lucide-react'
-import Image from 'next/image'
-import BDS4 from '@/public/BDS4.png'
-
-type FeatureText = {
-  icon: JSX.Element
-  title: string
-  description: string
-  href: string
-  cta?: string
-}
-
-const featureText: FeatureText[] = [
-  {
-    icon: <Image className='max-h-48 object-contain' src={BDS4} alt='placeholder1' />,
-    title: 'Servicio de datos',
-    href: '/services#data-services',
-    description: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
-    cta: 'Ver más'
-  },
-  {
-    icon: <Image className='max-h-48 object-contain' src={BDS4} alt='placeholder1' />,
-    title: 'Desarrollo de Software',
-    href: '/services#software-services',
-    description: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
-    cta: 'Ver más'
-  },
-  {
-    icon: <Image className='max-h-48 object-contain' src={BDS4} alt='placeholder1' />,
-    title: 'ML, IA, RPA',
-    href: '/services#ia-data',
-    description: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
-    cta: 'Ver más'
-  },
-  {
-    icon: <Image className='max-h-48 object-contain' src={BDS4} alt='placeholder1' />,
-    title: 'Business Intelligence',
-    href: '/services#bigdata-services',
-    description: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
-    cta: 'Ver más'
-  }
-]
+import BigData from '@/public/service-logos/BigData-Logo.webp'
+import DataService from '@/public/service-logos/DataService-Logo.webp'
+import ML from '@/public/service-logos/ML-Logo.webp'
+import SoftDev from '@/public/service-logos/SoftDev-Logo.webp'
+import { useEffect, useRef, useState } from 'react'
+import LeftServiceElement from './LeftServiceElement'
+import RightServiceElement from './RightServiceElement'
+import SectionTitle from './SectionTitle'
 
 const MainServices = () => {
+  const containerRef = useRef<HTMLDivElement>(null)
+  const [containerHeight, setContainerHeight] = useState<number>()
+  console.log(containerHeight)
+  useEffect(() => {
+    const container = containerRef.current
+    if (!container) return
+    const children = container.children
+
+    // Calcular la altura total de los hijos
+    let totalHeight = 0
+    for (let i = 0; i < children.length; i++) {
+      totalHeight += (children[i] as HTMLElement).offsetHeight
+    }
+
+    // Establecer la altura del contenedor al doble de la altura total de los hijos
+    setContainerHeight(totalHeight * 1.6)
+  }, [])
   return (
-    <Craft.Section className='border-b '>
+    <Craft.Section className='relative z-10 '>
       <Craft.Container className='not-prose max-w-7xl'>
-        <div className='flex flex-col gap-6'>
-          <h3 className='text-4xl font-bold text-center'>
-            <Balancer>Principales Servicios</Balancer>
-          </h3>
-
-          <div className='mt-6 grid gap-6 md:mt-12 md:grid-cols-4'>
-            {featureText.map(({ icon, title, description, href, cta }, index) => (
-              <Link href={href} className='flex flex-col justify-between gap-6 rounded-lg border p-6 transition-all items-center hover:-mt-2 hover:mb-2' key={index}>
-                <div className='flex flex-col items-center gap-4 '>
-                  <h4 className='font-semibold text-xl'>{title}</h4>
-                  <span className='items-center justify-center '> {icon}</span>
-
-                  <p className='text-base opacity-75'>
-                    <Balancer>{description}</Balancer>
-                  </p>
-                </div>
-                {cta && (
-                  <div className='flex h-fit items-center text-sm font-semibold'>
-                    <p>{cta}</p> <ArrowRight className='ml-2 h-4 w-4' />
-                  </div>
-                )}
-              </Link>
-            ))}
+        <div className='flex flex-col gap-6 items-center'>
+          <SectionTitle>Principales Servicios</SectionTitle>
+          <div ref={containerRef} className='relative flex p-4 vertical-line '>
+            <div className='left-services flex flex-col  pr-5 justify-between' style={{ height: containerHeight }}>
+              <div className='blank-space h-1/6' />
+              <LeftServiceElement image={BigData} title='Big Data' description='Lorem ipsum dolor sit amet, consectetur adipis.' order={2} href='/services#bigdata-services' />
+              <div className='blank-space h-1/6' />
+              <LeftServiceElement image={SoftDev} title='Desarrollo de Software' description='Lorem ipsum dolor sit amet, consectetur adipis.' order={4} href='/services#software-services' />
+            </div>
+            <div className='right-services flex flex-col justify-between pl-5 ' style={{ height: containerHeight }}>
+              <RightServiceElement image={DataService} title='Servicio de Datos' description='Lorem ipsum dolor sit amet, consectetur adipis.' order={1} href='/services#data-services' />
+              <div className='blank-space h-1/6' />
+              <RightServiceElement image={ML} title='ML - IA - RPA' description='Lorem ipsum dolor sit amet, consectetur adipis.' order={3} href='/services#ia-data' />
+              <div className='blank-space h-1/6' />
+            </div>
           </div>
         </div>
       </Craft.Container>
