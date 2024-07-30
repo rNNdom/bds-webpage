@@ -14,10 +14,8 @@ export default function Home() {
   return (
     <Section className='md:py-0 py-0'>
       <Section className='bg-bgBlueColor !my-0 md:my-0 !py-0 text-white'>
-        <Section className='bg-bds-background-texture-2 bg-cover text-white'>
-          <Container>
-            <InitialSection />
-          </Container>
+        <Section className='bg-bds-background-texture-2 bg-cover text-white py-0 md:py-0'>
+          <InitialSection />
         </Section>
       </Section>
 
