@@ -1,26 +1,12 @@
 'use client'
-import React, { useEffect, useRef, useState } from 'react'
+import { Container, Section } from '@/components/craft'
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion'
-import { Section, Container } from '@/components/craft'
-import Image, { StaticImageData } from 'next/image'
 import BDS4 from '@/public/BDS4.png'
+import Image from 'next/image'
+import { useEffect, useRef, useState } from 'react'
 import { Card } from './ui/card'
 
-type ServicesListProps = {
-  image: StaticImageData
-  title: string
-  description: string
-}
-
-type ServicesType = {
-  id: string
-  question: string
-  description?: string
-  image: StaticImageData
-  contentList: ServicesListProps[]
-}
-
-const Services: ServicesType[] = [
+const Services: AccordeonProps[] = [
   {
     id: 'data-services',
     question: 'Servicios de datos',
