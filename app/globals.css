@@ -152,8 +152,7 @@
 
   @media (width <= 768px) {
     .image-rounded-full {
-      border-radius: 100%;
-      width: 80%;
+      width: 70%;
     }
   }
 }
