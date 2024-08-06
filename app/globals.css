@@ -154,13 +154,13 @@
     }
   }
 
-  @media (width >= 768) {
+  @media (width >= 768px) {
     .container-height {
       height: 600px;
     }
   }
 
-  @media (width <= 600) {
+  @media (width <= 600px) {
     .tech-columns {
       display: grid;
       grid-template-columns: 1fr;
