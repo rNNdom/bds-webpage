@@ -1,17 +1,12 @@
 // Craft Imports
 import { ClientsSection } from '@/components/ClientsSection'
 import { Container, Section } from '@/components/craft'
-
-// Components
-
-// Icons
 import InitialSection from '@/components/InitialSection'
 import MainServices from '@/components/MainServices'
 import Technologies from '@/components/Technologies'
 import Image from 'next/image'
-import Slogan from '@/public/slogan/Slogan1.1.webp'
+import Slogan from '@/public/slogan/Slogan.webp'
 
-// This page is using the craft.tsx component and design system
 export default function Home() {
   return (
     <Section className='md:py-0 py-0'>
@@ -28,7 +23,7 @@ export default function Home() {
             necesitas para llevar a cabo tus proyectos promoviendo una cultura de auténtico trabajo en equipo.
           </p>
           <span className='flex w-full justify-center pt-6 '>
-            <Image src={Slogan} alt='Slogan' className='flex w-max opacity-60 not-prose' width={190} height={190} />
+            <Image src={Slogan} alt='Slogan' className='flex w-max opacity-90 not-prose h-20' />
           </span>
         </Container>
       </Section>

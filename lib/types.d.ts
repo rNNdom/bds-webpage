@@ -22,6 +22,6 @@ type AccordeonProps = {
   id: string
   question: string
   description?: string
-  image: StaticImageData
+  image?: StaticImageData
   contentList: AccordeonListProps[]
 }
