@@ -12,7 +12,6 @@ import Balancer from 'react-wrap-balancer'
 import Cardif from '@/public/cardif.jpg'
 import ADRetail from '@/public/ADRetail.png'
 import CE from '@/public/Logo Coordinador Electrico.png'
-import { count } from 'console'
 import SectionTitle from './SectionTitle'
 
 const carrouselItems = [
@@ -78,19 +77,20 @@ export function ClientsSection() {
 
   return (
     <div className='relative w-full z-10 pb-5 '>
-      <Carousel setApi={setApi} className='w-full flex flex-col items-center'>
+      <Carousel setApi={setApi} className='w-full flex flex-col items-center overflow-hidden'>
         <SectionTitle>Principales Clientes</SectionTitle>
         <CarouselPrevious
           style={{
             backgroundColor: 'var(--background)'
           }}
+          className=' hide-responsive'
         />
-        <CarouselContent className='mt-6 md:mt-12 '>
+        <CarouselContent className='mt-6 md:mt-12 flex flex-col md:flex-row '>
           {carrouselItems.map((item) => (
-            <CarouselItem key={item.id} className='md:basis-1/3 sm:basis-2/12 pl-2'>
+            <CarouselItem key={item.id} className='md:basis-1/3 sm:basis-2/12 basis-2/12 pl-2'>
               <div className='p-2 object-contain '>
                 <Card>
-                  <CardContent className='flex aspect-square items-center justify-center p-6 overflow-hidden flex-col '>
+                  <CardContent className='flex aspect-square items-center justify-center p-6 w-72 md:w-fit flex-col '>
                     <span className='h-2/3 items-center flex justify-center'>
                       <Image src={item.image} alt={item.alt} className={item.style} />
                     </span>
@@ -107,9 +107,10 @@ export function ClientsSection() {
           style={{
             backgroundColor: 'var(--background)'
           }}
+          className='hide-responsive'
         />
       </Carousel>
-      <div className='absolute left-0 right-0 flex justify-center space-x-2 pt-7'>
+      <div className='absolute left-0 right-0 md:flex justify-center space-x-2 pt-7 hidden'>
         {Array.from({ length: count }).map((_, index) => (
           <svg key={index} className={`w-3 h-3 ${current - 1 === index ? 'fill-current text-oxfordBlue' : 'fill-current text-bgGreenColor'}`} viewBox='0 0 8 8'>
             <circle cx='4' cy='4' r='4' />

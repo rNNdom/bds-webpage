@@ -8,16 +8,16 @@ import { Container, Section } from '@/components/craft'
 import InitialSection from '@/components/InitialSection'
 import MainServices from '@/components/MainServices'
 import Technologies from '@/components/Technologies'
+import Image from 'next/image'
+import Slogan from '@/public/slogan/Slogan1.1.webp'
 
 // This page is using the craft.tsx component and design system
 export default function Home() {
   return (
     <Section className='md:py-0 py-0'>
       <Section className='bg-bgBlueColor !my-0 md:my-0 !py-0 text-white'>
-        <Section className='bg-bds-background-texture-2 bg-cover text-white'>
-          <Container>
-            <InitialSection />
-          </Container>
+        <Section className='bg-bds-background-texture-2 bg-cover text-white py-0 md:py-0'>
+          <InitialSection />
         </Section>
       </Section>
 
@@ -27,16 +27,9 @@ export default function Home() {
             Desde el año 2013 hemos estado brindando apoyo a clientes en los sectores de <strong>banca, retail e inmobiliaria</strong>. Nuestro equipo está capacitado para brindar el apoyo que
             necesitas para llevar a cabo tus proyectos promoviendo una cultura de auténtico trabajo en equipo.
           </p>
-          <p
-            className='
-            text-xl
-            pt-4
-            font-extrabold
-          '
-            style={{ letterSpacing: '0.4em' }}
-          >
-            Authentic Team Work
-          </p>
+          <span className='flex w-full justify-center pt-6 '>
+            <Image src={Slogan} alt='Slogan' className='flex w-max opacity-60 not-prose' width={190} height={190} />
+          </span>
         </Container>
       </Section>
 

@@ -79,10 +79,10 @@ const config = {
         'accordion-up': 'accordion-up 0.2s ease-out'
       },
       backgroundImage: {
-        'bds-background-texture-1': "url('../public/bg-image-1.webp')",
-        'bds-background-texture-2': "url('../public/bg-image-2.webp')",
-        'bds-background-texture-3': "url('../public/bg-image-3.webp')",
-        'bds-background-gradient-1': "url('../public/bg-gradient-1.png')"
+        'bds-background-texture-1': "url('../public/backgrounds/bg-image-1.svg')",
+        'bds-background-texture-2': "url('../public/backgrounds/bg-image-2.svg')",
+        'bds-background-texture-3': "url('../public/backgrounds/bg-image-3.svg')",
+        'bds-background-gradient-1': "url('../public/backgrounds/bg-gradient-1.svg')"
       }
     }
   },
