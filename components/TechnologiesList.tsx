@@ -37,7 +37,7 @@ export default function TechnologiesList() {
                 </AccordionTrigger>
 
                 <AccordionContent className={`text-base border-t ${openAccordion === service.id && 'border-0'}`}>
-                  <div className='pt-4 grid grid-cols-2'>
+                  <div className={`pt-4  ${service.contentList.length <= 1 ? 'flex justify-center' : 'grid grid-cols-2'} `}>
                     {service.contentList.map((item, index) => (
                       <Card key={index} className='flex flex-col p-2 gap-1 items-center text-oxfordBlue m-3 justify-center border'>
                         <span className='w-28 h-28 flex items-center justify-center'>
