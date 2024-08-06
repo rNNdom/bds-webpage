@@ -159,6 +159,14 @@
       height: 600px;
     }
   }
+
+  @media (width <= 600) {
+    .tech-columns {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+  }
 }
 
 .fade-in {

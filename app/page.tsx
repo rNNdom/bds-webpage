@@ -1,16 +1,12 @@
 // Craft Imports
 import { ClientsSection } from '@/components/ClientsSection'
 import { Container, Section } from '@/components/craft'
-
-// Components
-
-// Icons
 import InitialSection from '@/components/InitialSection'
 import MainServices from '@/components/MainServices'
 import Technologies from '@/components/Technologies'
 import Image from 'next/image'
 import Slogan from '@/public/slogan/Slogan.webp'
-// This page is using the craft.tsx component and design system
+
 export default function Home() {
   return (
     <Section className='md:py-0 py-0'>
