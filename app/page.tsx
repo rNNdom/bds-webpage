@@ -9,8 +9,7 @@ import InitialSection from '@/components/InitialSection'
 import MainServices from '@/components/MainServices'
 import Technologies from '@/components/Technologies'
 import Image from 'next/image'
-import Slogan1 from '@/public/slogan/Slogan1.webp'
-import Slogan2 from '@/public/slogan/Slogan2.webp'
+import Slogan from '@/public/slogan/Slogan1.1.webp'
 
 // This page is using the craft.tsx component and design system
 export default function Home() {
@@ -28,8 +27,8 @@ export default function Home() {
             Desde el año 2013 hemos estado brindando apoyo a clientes en los sectores de <strong>banca, retail e inmobiliaria</strong>. Nuestro equipo está capacitado para brindar el apoyo que
             necesitas para llevar a cabo tus proyectos promoviendo una cultura de auténtico trabajo en equipo.
           </p>
-          <span className='flex w-full justify-center pt-6'>
-            <Image src={Slogan2} alt='Slogan' className='flex w-max opacity-90' width={190} height={190} />
+          <span className='flex w-full justify-center pt-6 '>
+            <Image src={Slogan} alt='Slogan' className='flex w-max opacity-60 not-prose' width={190} height={190} />
           </span>
         </Container>
       </Section>

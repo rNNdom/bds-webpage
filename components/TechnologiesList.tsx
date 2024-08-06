@@ -1,9 +1,9 @@
 'use client'
-import React, { useEffect, useRef, useState } from 'react'
+import { Container, Section } from '@/components/craft'
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion'
-import { Section, Container } from '@/components/craft'
-import Image, { StaticImageData } from 'next/image'
 import BDS4 from '@/public/BDS4.png'
+import Image from 'next/image'
+import { useState } from 'react'
 import { Card } from './ui/card'
 
 const Technologies: AccordeonProps[] = [
@@ -15,35 +15,19 @@ const Technologies: AccordeonProps[] = [
     contentList: [
       {
         image: BDS4,
-        title: 'Asesorías'
+        title: 'PowerBI'
       },
       {
         image: BDS4,
-        title: 'Software factory'
+        title: 'AWS QuickSight'
       },
       {
         image: BDS4,
-        title: 'Visualización'
+        title: 'MicroStrategy'
       },
       {
         image: BDS4,
-        title: 'Integración'
-      },
-      {
-        image: BDS4,
-        title: 'Outsourcing'
-      },
-      {
-        image: BDS4,
-        title: 'Mantenimiento'
-      },
-      {
-        image: BDS4,
-        title: 'Capacitación'
-      },
-      {
-        image: BDS4,
-        title: 'Proyectos y servicios DWH'
+        title: 'Tableau'
       }
     ]
   },
@@ -55,11 +39,15 @@ const Technologies: AccordeonProps[] = [
     contentList: [
       {
         image: BDS4,
-        title: 'Pruebas de Conceptos'
+        title: 'OpenAI'
       },
       {
         image: BDS4,
-        title: 'Migraciones'
+        title: 'LlamaIndex'
+      },
+      {
+        image: BDS4,
+        title: 'ChromaDB'
       }
     ]
   },
@@ -71,15 +59,7 @@ const Technologies: AccordeonProps[] = [
     contentList: [
       {
         image: BDS4,
-        title: 'Desarrollo móvil'
-      },
-      {
-        image: BDS4,
-        title: 'Desarrollo de software'
-      },
-      {
-        image: BDS4,
-        title: 'Infraestructura en la Nube'
+        title: 'Azure Databricks'
       }
     ]
   },
@@ -91,15 +71,35 @@ const Technologies: AccordeonProps[] = [
     contentList: [
       {
         image: BDS4,
-        title: 'Inteligencia artificial generativa'
+        title: 'PostgreSQL'
       },
       {
         image: BDS4,
-        title: 'Machine Learning'
+        title: 'Apache HBase'
       },
       {
         image: BDS4,
-        title: 'RPA'
+        title: 'OracleSQL'
+      },
+      {
+        image: BDS4,
+        title: 'Hype'
+      },
+      {
+        image: BDS4,
+        title: 'AWS Redshift'
+      },
+      {
+        image: BDS4,
+        title: 'Teradata'
+      },
+      {
+        image: BDS4,
+        title: 'Google BigQuery'
+      },
+      {
+        image: BDS4,
+        title: 'SAP Hana'
       }
     ]
   },
@@ -111,15 +111,31 @@ const Technologies: AccordeonProps[] = [
     contentList: [
       {
         image: BDS4,
-        title: 'Inteligencia artificial generativa'
+        title: 'React'
       },
       {
         image: BDS4,
-        title: 'Machine Learning'
+        title: 'TypeScript'
       },
       {
         image: BDS4,
-        title: 'RPA'
+        title: 'JavaScript'
+      },
+      {
+        image: BDS4,
+        title: 'HTML'
+      },
+      {
+        image: BDS4,
+        title: 'CSS'
+      },
+      {
+        image: BDS4,
+        title: 'Python'
+      },
+      {
+        image: BDS4,
+        title: 'Scala'
       }
     ]
   },
@@ -131,15 +147,27 @@ const Technologies: AccordeonProps[] = [
     contentList: [
       {
         image: BDS4,
-        title: 'Inteligencia artificial generativa'
+        title: 'Talend'
       },
       {
         image: BDS4,
-        title: 'Machine Learning'
+        title: 'ControlM'
       },
       {
         image: BDS4,
-        title: 'RPA'
+        title: 'Apache Nifi'
+      },
+      {
+        image: BDS4,
+        title: 'Cawa'
+      },
+      {
+        image: BDS4,
+        title: 'Pentaho'
+      },
+      {
+        image: BDS4,
+        title: 'IBM'
       }
     ]
   }
@@ -151,7 +179,7 @@ export default function TechnologiesList() {
     setOpenAccordion((prev) => (prev === id ? null : id))
   }
   return (
-    <Section className='md:py-0 border-t'>
+    <Section className='md:py-0 '>
       <Container className='max-w-full sm:p-0 sm:py-8'>
         <div className='mt-4 grid grid-cols-3 gap-4 md:mt-8'>
           {Technologies.map((service, index) => (

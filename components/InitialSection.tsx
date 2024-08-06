@@ -2,7 +2,6 @@ import * as Craft from '@/components/craft'
 import { Button } from '@/components/ui/button'
 import Link from 'next/link'
 import Image from 'next/image'
-import BDS4 from '@/public/BDS4.png'
 import LANDINGIMAGE from '@/public/LANDINGIMAGE.jpg'
 const IntialSection = () => {
   return (
@@ -24,7 +23,7 @@ const IntialSection = () => {
             </div>
           </div>
           <div>
-            <div className='flex not-prose max-h-[800px] items-center max-w-[1000px] w-[100%] justify-center md:justify-normal pb-4 md:pb-0'>
+            <div className='flex not-prose max-h-[800px] items-center max-w-[1000px] w-[100%] overflow-hidden justify-center md:justify-normal pb-4 md:pb-0'>
               <Image src={LANDINGIMAGE} alt='placeholder' className='rounded-full image-rounded-full max-w-[150%] ' />
             </div>
           </div>

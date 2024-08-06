@@ -4,9 +4,9 @@ import * as Craft from '@/components/craft'
 
 // Icons
 import BigData from '@/public/service-logos/BigData-Logo.webp'
-import DataService from '@/public/service-logos/DataService-Logo.webp'
-import ML from '@/public/service-logos/ML-Logo.webp'
-import SoftDev from '@/public/service-logos/SoftDev-Logo.webp'
+import DataService from '@/public/service-logos/DataServiceLogo.svg'
+import ML from '@/public/service-logos/MLLogo.svg'
+import SoftDev from '@/public/service-logos/SoftDevLogo.svg'
 import { useEffect, useRef, useState } from 'react'
 import LeftServiceElement from './LeftServiceElement'
 import RightServiceElement from './RightServiceElement'
