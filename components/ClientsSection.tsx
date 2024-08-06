@@ -12,7 +12,6 @@ import Balancer from 'react-wrap-balancer'
 import Cardif from '@/public/cardif.jpg'
 import ADRetail from '@/public/ADRetail.png'
 import CE from '@/public/Logo Coordinador Electrico.png'
-import { count } from 'console'
 import SectionTitle from './SectionTitle'
 
 const carrouselItems = [
