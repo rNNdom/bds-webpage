@@ -13,7 +13,7 @@ export default function TechnologiesList() {
   }
   return (
     <Section className='md:py-0 '>
-      <Container className='max-w-full sm:p-0 sm:py-8'>
+      <Container className='max-w-full sm:p-0 sm:py-8 p-0'>
         <div className='mt-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:mt-8'>
           {TechnologiesContent.map((service, index) => (
             <Accordion

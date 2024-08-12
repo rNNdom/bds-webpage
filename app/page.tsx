@@ -41,7 +41,7 @@ export default function Home() {
       </Section>
 
       <Section className='md:pt-0 bg-bds-background-texture-3 bg-cover bg-no-repeat md:py-0'>
-        <Container className='max-w-7xl text-oxfordBlue'>
+        <Container className='max-w-7xl text-oxfordBlue p-0'>
           <Technologies />
         </Container>
       </Section>

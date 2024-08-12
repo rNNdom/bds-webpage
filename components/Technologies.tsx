@@ -5,7 +5,7 @@ import TechnologiesList from './TechnologiesList'
 const Technologies = () => {
   return (
     <Craft.Section>
-      <Craft.Container className='not-prose max-w-7xl'>
+      <Craft.Container className='not-prose max-w-7xl p-0'>
         <div className='flex flex-col gap-6 items-center'>
           <SectionTitle>Tecnologías</SectionTitle>
         </div>
