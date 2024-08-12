@@ -3,31 +3,35 @@ import { Container, Section } from '@/components/craft'
 import React from 'react'
 import Balancer from 'react-wrap-balancer'
 import Image from 'next/image'
-import BDS4 from '@/public/BDS4.png'
+import IMAGE2 from '@/public/IMAGEN2.jpg'
 
 export default function AboutUs() {
   return (
-    <Section className='text-oxfordBlue  md:pt-0 pb-0 md:pb-0 not-prose'>
-      <Container className='text-center sm:p-2 not-prose'>
-        <h3 className='text-4xl font-bold text-center pb-10'>
-          <Balancer>Sobre nosotros</Balancer>
-        </h3>
-
-        <div className='flex flex-row items-center justify-around'>
-          <div className='border rounded-full overflow-hidden '>
-            <Image src={BDS4} alt='placeholder' className='fill object-cover bg-white ' width={350} height={350} />
+    <Section className='py-0 md:py-0 not-prose'>
+      <Container className='max-w-full p-0 sm:p-0 mx-0'>
+        <div className='flex about-us flex-row items-center gap-4 justify-between'>
+          <div>
+            <div className='flex not-prose transition-all items-center w-[100%] max-h-[750px] max-w-[1000px] justify-center md:justify-end py-4 md:py-0 md:pb-0'>
+              <Image src={IMAGE2} alt='Persona dando una charla frente a gente.' className='max-w-[150%] rounded-br-[900px] image-box' placeholder='blur' />
+            </div>
           </div>
-          <div className='pl-10 w-3/6'>
-            <p className='mb-4'>
-              <Balancer className='text-start text-xl'>
-                Nos <strong>especializamos en brindar servicios de consultoría de BI y Big Data</strong> con un enfoque centrado en la <strong>excelencia, el compromiso y la experiencia.</strong>
-              </Balancer>
-            </p>
-            <p className='mb-4'>
-              <Balancer className='text-start text-xl'>
-                Gracias a nuestra experiencia, hemos logrado brindar <strong>soluciones que permiten a nuestros clientes sacar el máximo potencial de sus datos.</strong>
-              </Balancer>
-            </p>
+          <div className='md:w-1/2  '>
+            <div className='w-[90%]'>
+              <span>
+                <p className='mb-4  md:text-end text-2xl '>
+                  <Balancer>
+                    Nos <strong>especializamos en brindar servicios de consultoría de BI y Big Data</strong> con un enfoque centrado en la <strong>excelencia, el compromiso y la experiencia.</strong>
+                  </Balancer>
+                </p>
+              </span>
+              <span>
+                <p className='mb-4  md:text-end text-2xl  '>
+                  <Balancer>
+                    Gracias a nuestra experiencia, hemos logrado brindar <strong>soluciones que permiten a nuestros clientes sacar el máximo potencial de sus datos.</strong>
+                  </Balancer>
+                </p>
+              </span>
+            </div>
           </div>
         </div>
       </Container>

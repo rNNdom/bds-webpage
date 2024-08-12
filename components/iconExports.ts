@@ -1,6 +1,6 @@
 import BigQuery from '@/public/technologies-icons/BD/BigQuery.svg'
 import HBase from '@/public/technologies-icons/BD/hbase.svg'
-import Hype from '@/public/technologies-icons/BD/hype.png'
+import ApacheHive from '@/public/technologies-icons/BD/ApacheHive.svg'
 import OracleSQL from '@/public/technologies-icons/BD/OracleSQL.svg'
 import PostgreSQL from '@/public/technologies-icons/BD/postgresql.svg'
 import Redshift from '@/public/technologies-icons/BD/redshift.svg'
@@ -14,7 +14,7 @@ import QuickSight from '@/public/technologies-icons/BI/QuickSight.svg'
 
 import BMC from '@/public/technologies-icons/ETL/bmc.svg'
 import IBM from '@/public/technologies-icons/ETL/ibm.svg'
-import Kawa from '@/public/technologies-icons/ETL/kawa.jpeg'
+import CA from '@/public/technologies-icons/ETL/CA.png'
 import Nifi from '@/public/technologies-icons/ETL/nifi.svg'
 import Talend from '@/public/technologies-icons/ETL/talend.svg'
 import Pentaho from '@/public/technologies-icons/ETL/pentaho.png'
@@ -24,6 +24,7 @@ import LlamaIndex from '@/public/technologies-icons/IA/LlamaIndex.svg'
 import OpenAI from '@/public/technologies-icons/IA/OpenAI.svg'
 
 import Databricks from '@/public/technologies-icons/ML/Databricks.svg'
+import AWSML from '@/public/technologies-icons/ML/machine-learning.svg'
 
 import CSS from '@/public/technologies-icons/Software/CSS3.svg'
 import HTML from '@/public/technologies-icons/Software/HTML5.svg'
@@ -85,6 +86,10 @@ export const TechnologiesContent: AccordeonProps[] = [
       {
         image: Databricks,
         title: 'Azure Databricks'
+      },
+      {
+        image: AWSML,
+        title: 'AWS Machine Learning'
       }
     ]
   },
@@ -106,8 +111,8 @@ export const TechnologiesContent: AccordeonProps[] = [
         title: 'OracleSQL'
       },
       {
-        image: Hype,
-        title: 'Hype'
+        image: ApacheHive,
+        title: 'Apache Hive'
       },
       {
         image: Redshift,
@@ -184,8 +189,8 @@ export const TechnologiesContent: AccordeonProps[] = [
         title: 'Apache Nifi'
       },
       {
-        image: Kawa,
-        title: 'Kawa'
+        image: CA,
+        title: 'CA Workload Automation'
       },
       {
         image: Pentaho,

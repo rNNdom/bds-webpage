@@ -14,7 +14,7 @@ import { Button } from '@/components/ui/button'
 import { ScrollArea } from '@/components/ui/scroll-area'
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet'
 
-import { mainMenu } from '@/menu.config'
+import { mainMenuMobile } from '@/menu.config'
 
 export function MobileNav() {
   const [open, setOpen] = React.useState(false)
@@ -33,7 +33,7 @@ export function MobileNav() {
         </MobileLink>
         <ScrollArea className='my-4 h-[calc(100vh-8rem)] pt-2'>
           <div className='flex flex-col space-y-6 pr-10'>
-            {Object.entries(mainMenu).map(([key, href]) => (
+            {Object.entries(mainMenuMobile).map(([key, href]) => (
               <span key={key} className=''>
                 <MobileLink href={href} onOpenChange={setOpen} className='p-1 pl-5 font-medium justify-start flex rounded-md bg-buttonTealColor'>
                   {key.charAt(0).toUpperCase() + key.slice(1)}

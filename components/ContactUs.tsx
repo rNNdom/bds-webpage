@@ -44,16 +44,19 @@ function ContactUs() {
   return (
     <Section className='text-oxfordBlue  md:pt-0 pb-0 md:pb-0 not-prose transition-all'>
       <Container id='contact-form' className='text-center sm:p-2 not-prose'>
-        <h3 className='text-4xl font-bold text-center pb-10'>
+        <h3 className='text-4xl font-bold text-center pb-10 text-white'>
           <Balancer>Contáctanos</Balancer>
         </h3>
 
-        <form className='flex flex-col' onSubmit={handleSubmit}>
-          <input name='name' type='text' placeholder='Tu nombre' required className='mb-2 p-2 border rounded' />
-          <input name='email' type='email' placeholder='Correo electrónico' required className='mb-2 p-2 border rounded' />
-          <textarea name='message' placeholder='Tu mensaje (Max. 500 caracteres)' maxLength={500} required className='mb-2 p-2 border rounded h-48 resize-none' />
-          <span className='flex justify-center'>
-            <Button type='submit' className='hidden sm:flex bg-buttonTealColor font-semibold text-md w-1/2 '>
+        <form onSubmit={handleSubmit}>
+          <div className='grid md:grid-cols-2 grid-cols-1 gap-4'>
+            <input name='name' type='text' placeholder='Tu nombre' required className='mb-2 p-2 border rounded' />
+            <input name='email' type='email' placeholder='Correo electrónico' required className='mb-2 p-2 border rounded' />
+            <input name='phone' type='tel' placeholder='Número de contacto' required className='mb-2 p-2 border rounded' />
+            <input name='empresa' type='text' placeholder='Empresa' required className='mb-2 p-2 border rounded' />
+          </div>
+          <span className='flex justify-center pt-4'>
+            <Button type='submit' className='hidden sm:flex bg-buttonTealColor font-semibold text-md w-1/3 '>
               Enviar
             </Button>
           </span>

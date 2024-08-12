@@ -2,7 +2,7 @@ import * as Craft from '@/components/craft'
 import { Button } from '@/components/ui/button'
 import Link from 'next/link'
 import Image from 'next/image'
-import LANDINGIMAGE from '@/public/LANDINGIMAGE.jpg'
+import LANDINGIMAGE from '@/public/LANDINGIMAGE.webp'
 const IntialSection = () => {
   return (
     <Craft.Section className='py-0 md:py-0 '>
@@ -23,8 +23,8 @@ const IntialSection = () => {
             </div>
           </div>
           <div>
-            <div className='flex not-prose max-h-[800px] items-center max-w-[1000px] w-[100%] overflow-hidden justify-center md:justify-normal pt-4 md:pb-0'>
-              <Image src={LANDINGIMAGE} alt='placeholder' className='rounded-full image-rounded-full max-w-[150%] ' />
+            <div className='flex not-prose max-h-[800px] items-center max-w-[1000px] w-[100%] overflow-hidden justify-center md:justify-normal pt-4 md:pt-0 md:pb-0'>
+              <Image src={LANDINGIMAGE} alt='placeholder' className='rounded-full image-rounded max-w-[150%] ' placeholder='blur' />
             </div>
           </div>
         </div>

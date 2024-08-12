@@ -43,8 +43,8 @@ const Nav = ({ className, children, id }: NavProps) => {
   return (
     <nav className={cn('sticky z-50 top-0 bg-bgBlueColor border-bgBlueColor', 'border-b', 'fade-in', className)} id={id}>
       <div id='nav-container' className='max-w-5xl mx-auto px-6 sm:px-8 flex justify-between items-center text-white'>
-        <Link className='hover:opacity-75 transition-all flex gap-2 items-center h-24' href='/'>
-          <Image src={BDSLOGO1} alt='Logo' className='object-contain p-1' width={166} height={166} />
+        <Link className='hover:opacity-75 transition-all flex gap-2 items-center h-24 w-40 min-w-40' href='/'>
+          <Image src={BDSLOGO1} alt='Logo' className='object-contain' />
         </Link>
         {children}
         <div className='flex items-center gap-2 '>
