@@ -15,7 +15,7 @@ const IntialSection = () => {
               </span>
               <div className='not-prose flex gap-2 justify-center md:justify-start'>
                 <Button className='w-fit bg-buttonTealColor rounded-xl font-bold h-14' asChild>
-                  <Link className='text-xl' href='#'>
+                  <Link className='text-xl' href='/about-us'>
                     Conoce más
                   </Link>
                 </Button>

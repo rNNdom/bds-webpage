@@ -27,7 +27,7 @@ export default function AboutUs() {
               <span>
                 <p className='mb-4  md:text-end text-2xl  '>
                   <Balancer>
-                    Gracias a nuestra experiencia, hemos logrado brindar <strong>soluciones que permiten a nuestros clientes sacar el máximo potencial de sus datos.</strong>
+                    Gracias a nuestra experiencia, hemos logrado implementar <strong>soluciones que permiten a nuestros clientes sacar el máximo potencial de sus datos.</strong>
                   </Balancer>
                 </p>
               </span>
