@@ -37,7 +37,7 @@ export default function PartnersSection() {
 
         <div className='flex flex-col md:flex-row gap-16 justify-center'>
           {featureText.map(({ icon, title, description, href }, index) => (
-            <a href={href} className='flex rounded-lg p-6 transition-all hover:-mt-2 hover:mb-2 bg-lightGreenBackground bg-opacity-5 md:w-fit ' key={index}>
+            <a href={href} className='flex rounded-lg p-6 transition-all hover:-mt-2 hover:mb-2 bg-white bg-opacity-5 md:w-fit ' key={index}>
               <div className='flex flex-col  items-center'>
                 <span className='pr-7 p-10 flex  flex-col gap-6 '>
                   <span className='items-center justify-center'>{icon}</span>

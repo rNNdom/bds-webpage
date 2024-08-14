@@ -1,5 +1,4 @@
 import { Container, Section } from '@/components/craft'
-
 import React from 'react'
 import Balancer from 'react-wrap-balancer'
 import Image from 'next/image'
@@ -12,7 +11,7 @@ export default function AboutUs() {
         <div className='flex about-us flex-row items-center gap-4 justify-between'>
           <div>
             <div className='flex not-prose transition-all items-center w-[100%] max-h-[750px] max-w-[1000px] justify-center md:justify-end py-4 md:py-0 md:pb-0'>
-              <Image src={IMAGE2} alt='Persona dando una charla frente a gente.' className='max-w-[150%] rounded-br-[900px] image-box' placeholder='blur' />
+              <Image src={IMAGE2} alt='Persona dando una charla frente a gente.' className='max-w-[150%] rounded-br-[700px] image-box' placeholder='blur' />
             </div>
           </div>
           <div className='md:w-1/2  '>
