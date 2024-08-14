@@ -12,7 +12,7 @@ export default function TeamLeaders() {
 
         <div className=' flex flex-wrap justify-around my-8'>
           {leaders.map((leader, index) => (
-            <div key={index} className='team-leaders-section text-center md:w-3/12 m-5 mt-0 border gap-10 md:gap-2 bg-white p-10 rounded-md flex md:flex-col'>
+            <div key={index} className='team-leaders-section text-center md:w-3/12 m-5 mt-0 border gap-10 md:gap-2 bg-white p-10 rounded-md flex md:flex-col shadow-sm shadow-gray-300 '>
               <Image src={UserImage} alt={`Líder ${index + 1}`} width={180} height={180} className='mx-auto mb-2 ' />
               <span className='flex flex-col items-center justify-center'>
                 <p className='font-bold text-lg'>{leader.name}</p>

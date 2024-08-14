@@ -1,27 +1,14 @@
-import { Container, Section } from '@/components/craft'
 import AboutUs from '@/components/AboutUs'
-import OurMission from '@/components/OurMission'
-import PartnersSection from '@/components/PartnersSection'
-import OurVision from '@/components/OurVision'
-import TeamLeaders from '@/components/TeamLeaders'
 import ContactUs from '@/components/ContactUs'
-import { StaticImageData } from 'next/image'
-import Image from 'next/image'
-import icon_cert from '@/public/about-us/icon_certs.svg'
-import icon_coolab from '@/public/about-us/icon_coolabs.svg'
-import icon_proyects from '@/public/about-us/icon_proyects.svg'
-type StatsType = {
-  image: StaticImageData
-  number: string
-  text: string
-}[]
+import { Container, Section } from '@/components/craft'
+import OurMission from '@/components/OurMission'
+import OurVision from '@/components/OurVision'
+import PartnersSection from '@/components/PartnersSection'
+import StatisticsSection from '@/components/StatisticsSection'
+import TeamLeaders from '@/components/TeamLeaders'
+
 export default function Home() {
-  const stats: StatsType = [
-    { number: '+50', text: '[Integrantes BDS]', image: icon_coolab },
-    { number: '+200', text: 'Proyectos exitosos', image: icon_proyects },
-    { number: '+50', text: 'Clientes satisfechos', image: icon_cert },
-    { number: '+50', text: 'Colaboradores certificados', image: icon_cert }
-  ]
+
   return (
     <Section className='md:py-0 py-0'>
       <Section className='md:py-0 text-oxfordBlue py-0 bg-bds-background-texture-3 bg-cover '>
@@ -31,19 +18,7 @@ export default function Home() {
       </Section>
 
       <Section className='md:pt-10 text-white pt-10 py-0 bg-bds-background-gradient-1 bg-cover'>
-        <Container className='text-center md:p-2 not-prose '>
-          <div className='grid stats-section justify-evenly text-center grid-cols-2 lg:grid-cols-4 '>
-            {stats.map((stat, index) => (
-              <div key={index} className='flex flex-col  items-center  py-3 md:py-2'>
-                <span className='w-16 h-16 flex items-center justify-center mb-2'>
-                  <Image src={stat.image} alt={stat.text} style={{ objectFit: 'contain', height: 60, width: 60 }} />
-                </span>
-                <h3 className='text-3xl font-bold mr-3'>{stat.number}</h3>
-                <p className='font-bold text-xl'>{stat.text}</p>
-              </div>
-            ))}
-          </div>
-        </Container>
+       <StatisticsSection />
       </Section>
 
       <Section className='py-0 md:py-0 bg-cover bg-parent'>

@@ -19,8 +19,8 @@ const config = {
       },
       colors: {
         buttonTealColor: '#75c5c2',
+        bgDarkGreen: '#65868D',
         lightGreenBackground: '#eef5f5',
-        lightGreenBackgroundHover: '#eef3f5',
         oxfordBlue: '#182440',
         footerBgColor: '#1a212a',
         bgBlueColor: '#212942',

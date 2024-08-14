@@ -1,17 +1,22 @@
 'use client'
 import { Container, Section } from '@/components/craft'
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion'
+import BigData from '@/public/service-logos/BigDataWhite.svg'
+import DataService from '@/public/service-logos/DataServiceLogoWhite.svg'
+import ML from '@/public/service-logos/MLLogoWhite.svg'
+import SoftDev from '@/public/service-logos/SoftDevLogoWhite.svg'
 import BDS4 from '@/public/BDS4.png'
 import Image from 'next/image'
 import { useEffect, useRef, useState } from 'react'
 import { Card } from './ui/card'
+import Balancer from 'react-wrap-balancer'
 
 const Services: AccordeonProps[] = [
   {
     id: 'data-services',
     question: 'Servicios de datos',
     description: 'Brindamos el mejor servicio y experiencia con nuestro servicio de datos hacia nuestros clientes. Confía en nuestra experiencia.',
-    image: BDS4,
+    image: DataService,
     contentList: [
       {
         image: BDS4,
@@ -59,7 +64,7 @@ const Services: AccordeonProps[] = [
     id: 'bigdata-services',
     question: 'Servicios de Big Data',
     description: 'Diseñamos e implementamos soluciones Big Data a la medida. Somos expertos en arquitecturas de Big Data.',
-    image: BDS4,
+    image: BigData,
     contentList: [
       {
         image: BDS4,
@@ -77,7 +82,7 @@ const Services: AccordeonProps[] = [
     id: 'software-services',
     question: 'Desarrollo de Software',
     description: 'Diseñamos e implementamos soluciones de software a la medida de nuestros clientes. Nos basamos en tecnología en la nube.',
-    image: BDS4,
+    image: SoftDev,
     contentList: [
       {
         image: BDS4,
@@ -103,7 +108,7 @@ const Services: AccordeonProps[] = [
     question: 'Inteligencia artificial y automatización de procesos',
     description:
       'Diseñamos soluciones empresareiales basadas en los tópicos tecnológicos más recientes, usando inteligencia artificial (AI), aprendfizaje automático (ML) y automatización robótica de procesos (RPA).',
-    image: BDS4,
+    image: ML,
     contentList: [
       {
         image: BDS4,
@@ -153,7 +158,7 @@ const ServicesList = () => {
   }
 
   return (
-    <Section className='md:py-0 border-t'>
+    <Section className='md:py-0 '>
       <Container>
         <div className='mt-4 flex flex-col gap-4 md:mt-8'>
           {Services.map((service, index) => (
@@ -169,27 +174,32 @@ const ServicesList = () => {
             >
               <AccordionItem
                 value={service.question}
-                className='rounded-md border bg-lightGreenBackground px-4 transition-all'
+                className='rounded-md px-4 transition-all bg-gradient-to-r border-0 from-bgDarkGreen to-bgGreenColor '
                 ref={(element) => {
                   sectionRefs.current[service.id] = element
                 }}
               >
-                <AccordionTrigger className='flex flex-row hover:no-underline gap-10' onClick={() => handleAccordionToggle(service.id)}>
-                  <Image src={service.image} alt={service.question} width={150} height={150} className='rounded-full' />
-                  <span className='flex flex-col gap-5 text-start'>
-                    <p className='text-xl font-bold'>{service.question}</p>
-                    <p className='font-normal'>{service.description}</p>
-                  </span>
+                <AccordionTrigger className='flex flex-col md:flex-row hover:no-underline gap-10 px-6' onClick={() => handleAccordionToggle(service.id)}>
+                  <Image src={service.image} alt={service.question} width={90} height={90} className=' object-fit' />
+                  <div className='flex flex-col text-start'>
+                    <span className='flex flex-col w-fit '>
+                      <p className='text-2xl font-bold'>{service.question}</p>
+                      <span className={`block border-bgGreenColor border-b-[3px] w-1/2`} />
+                    </span>
+                    <p className='text-lg font-semibold pt-3'>{service.description}</p>
+                  </div>
                 </AccordionTrigger>
 
-                <AccordionContent className='text-base border-t'>
+                <AccordionContent className='text-base  '>
                   <div className='pt-4'>
                     {service.contentList.map((item, index) => (
-                      <Card key={index} className='flex flex-row p-4 gap-4 items-center text-oxfordBlue m-3 my-10 border-0'>
-                        <Image src={item.image} alt={item.title} width={120} height={120} className='rounded-full' />
-                        <div className='p-3 pr-6 flex flex-grow flex-col'>
-                          <p className='font-bold text-lg pb-4'>{item.title}</p>
-                          <p className='text-lg'>{item.description}</p>
+                      <Card key={index} className='flex flex-col md:flex-row p-4 gap-4 items-center text-white m-3 my-10 border-0 border-t-[1px] rounded-none bg-transparent'>
+                        <Image src={item.image} alt={item.title} width={120} height={120} className='rounded-lg border-2 bg-white' />
+                        <div className='p-3 pr-6 flex flex-grow flex-col items-center md:items-start text-center md:text-start '>
+                          <p className='font-bold text-xl pb-4'>{item.title}</p>
+                          <p className='text-lg font-medium '>
+                            <Balancer>{item.description}</Balancer>
+                          </p>
                         </div>
                       </Card>
                     ))}

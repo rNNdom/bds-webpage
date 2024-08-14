@@ -1,14 +1,34 @@
 // /** @type {import('next').NextConfig} */
 // const nextConfig = {
-//   images: {
-//     remotePatterns: [
-//       {
-//         protocol: "https",
-//         hostname: process.env.WORDPRESS_HOSTNAME,
-//         port: "",
-//         pathname: "/**",
+//   experimental: {
+//     turbo: {
+//       rules: {
+//         '*.svg': {
+//           loaders: ['@svgr/webpack'],
+//           as: '*.js',
+//         },
 //       },
-//     ],
+//     },
+//   },
+//   webpack(config) {
+//     config.module.rules.push({
+//       test: /\.svg$/,
+//       issuer: {
+//         and: [/\.(css|scss)$/],
+//       },
+//       use: [
+//         {
+//           loader: 'file-loader',
+//           options: {
+//             name: '[name].[hash].[ext]',
+//             outputPath: 'static/media/backgrounds/',
+
+//           },
+//         },
+//       ],
+//     });
+
+//     return config;
 //   },
 // };
 
