@@ -18,42 +18,42 @@ const carrouselItems = [
   {
     id: 1,
     image: BCI,
-    alt: 'bci_logo',
+    alt: 'Logo Banco de Crédito e Inversiones',
     label: 'Banco de Crédito e Inversiones',
     style: 'object-contain'
   },
   {
     id: 2,
     image: CCSUD,
-    alt: 'cencosud_logo',
+    alt: 'Logo Cencosud Scotiabank',
     label: 'Cencosud Scotiabank',
     style: 'object-contain w-10/12 -mt-4 object-center item-center justify-center'
   },
   {
     id: 3,
     image: BCL,
-    alt: 'bancochile_logo',
+    alt: 'Logo Banco de Chile',
     label: 'Banco de Chile',
     style: 'object-contain'
   },
   {
     id: 4,
     image: Cardif,
-    alt: 'cardif_logo',
+    alt: 'Logo BNP Paribas',
     label: 'BNP Paribas',
     style: 'object-contain'
   },
   {
     id: 5,
     image: ADRetail,
-    alt: 'adretail_logo',
+    alt: 'Logo AD Retail',
     label: 'AD Retail',
     style: 'object-contain'
   },
   {
     id: 6,
     image: CE,
-    alt: 'ce_logo',
+    alt: 'Logo Coordinador Electrico',
     label: 'Coordinador Electrico',
     style: 'object-contain'
   }

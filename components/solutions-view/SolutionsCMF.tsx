@@ -3,25 +3,28 @@ import { Container, Section } from '@/components/craft'
 import CMFImage from '@/public/CMFImage.png'
 import Balancer from 'react-wrap-balancer'
 import Image from 'next/image'
+import SectionTitle from '../SectionTitle'
 
 export default function SolutionsCMF() {
   return (
-    <Section className='text-oxfordBlue  md:pt-0 pb-0 md:pb-0 not-prose'>
-      <Container className='text-center sm:p-2 not-prose'>
-        <div className='flex flex-row items-center justify-around'>
-          <div className='pl-10 w-3/6 '>
-            <h4 className='text-3xl font-bold text-center'>
-              <Balancer>CMF</Balancer>
-            </h4>
+    <Section className='relative z-10 text-oxfordBlue md:pt-0 pb-0 md:pb-0 not-prose '>
+      <Container className='text-center not-prose'>
+        <div className='flex flex-col md:flex-row-reverse items-center justify-around'>
+          <div className='pl-0 md:pl-10 w-full md:w-3/6 '>
+            <span className='flex justify-start w-full'>
+              <SectionTitle borderColor='border-white' width='w-2/3' className='text-3xl'>
+                CMF
+              </SectionTitle>
+            </span>
             <p className='mb-4 pt-5'>
-              <Balancer className='text-start text-xl'>
+              <Balancer className='text-justify md:text-start text-xl font-medium'>
                 <strong>Unifica</strong> en una única plataforma web los <strong>documentos que las empresas deben enviar a la CMF</strong>, facilitando su búsqueda por diversos criterios, además de
                 ofrecer una <strong>visión global por empresa</strong>.
               </Balancer>
             </p>
           </div>
           <div className='border overflow-hidden '>
-            <Image src={CMFImage} alt='placeholder' className='fill object-contain bg-white ' />
+            <Image src={CMFImage} alt='Imágen de procesos de unificación de datos' className='fill object-contain bg-white ' />
           </div>
         </div>
       </Container>

@@ -25,7 +25,7 @@ export default function AboutUs() {
             </p>
           </span>
           <span className='not-prose flex w-1/3 justify-center'>
-            <Image src={logo_vision} alt='vision' className=' w-48 h-48' />
+            <Image src={logo_vision} alt='Logo que muestra una persona en la retina de un ojo, visión' className=' w-48 h-48' />
           </span>
         </div>
       </Container>

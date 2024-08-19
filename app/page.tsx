@@ -23,7 +23,7 @@ export default function Home() {
             que necesitas para llevar a cabo tus proyectos promoviendo una cultura de auténtico trabajo en equipo.
           </p>
           <span className='flex w-full justify-center pt-6 '>
-            <Image src={Slogan} alt='Slogan' className='flex w-max opacity-90 not-prose h-20' />
+            <Image src={Slogan} alt='Slogan de empresa BDS SpA, haciéndo enfasis en el trabajo en equipo' className='flex w-max opacity-90 not-prose h-20' />
           </span>
         </Container>
       </Section>
