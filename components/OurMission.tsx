@@ -16,7 +16,7 @@ export default function OurMission() {
             <Image src={logo_mision} alt='mision' className='w-48 h-48' />
           </span>
           <span className='not-prose flex w-4/5'>
-            <p className='text-xl text-center md:text-start '>
+            <p className='text-xl text-justify md:text-start '>
               <Balancer>
                 En nuestro equipo, nos dedicamos a <strong>desbloquear el potencial de tus datos.</strong> Especializados en Business Intelligence y Big Data,
                 <strong> ofrecemos consultoría tanto a grandes corporaciones como a compañías pequeñas.</strong> <br /> <br />

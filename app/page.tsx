@@ -18,7 +18,7 @@ export default function Home() {
 
       <Section className='bg-bgGreenColor text-oxfordBlue not-prose'>
         <Container className='text-center sm:p-2'>
-          <p className='text-xl items-center '>
+          <p className='text-xl items-center md:text-center text-justify'>
             Desde el año 2013 hemos estado brindando apoyo a clientes en los sectores de <strong>banca, retail, seguros e inmobiliaria</strong>. Nuestro equipo está capacitado para brindar el apoyo
             que necesitas para llevar a cabo tus proyectos promoviendo una cultura de auténtico trabajo en equipo.
           </p>

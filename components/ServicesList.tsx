@@ -107,7 +107,7 @@ const Services: AccordeonProps[] = [
     id: 'ia-data',
     question: 'Inteligencia artificial y automatización de procesos',
     description:
-      'Diseñamos soluciones empresareiales basadas en los tópicos tecnológicos más recientes, usando inteligencia artificial (AI), aprendfizaje automático (ML) y automatización robótica de procesos (RPA).',
+      'Diseñamos soluciones empresareiales basadas en los tópicos tecnológicos más recientes, usando inteligencia artificial (AI), aprendizaje automático (ML) y automatización robótica de procesos (RPA).',
     image: ML,
     contentList: [
       {
@@ -197,9 +197,7 @@ const ServicesList = () => {
                         <Image src={item.image} alt={item.title} width={120} height={120} className='rounded-lg border-2 bg-white' />
                         <div className='p-3 pr-6 flex flex-grow flex-col items-center md:items-start text-center md:text-start '>
                           <p className='font-bold text-xl pb-4'>{item.title}</p>
-                          <p className='text-lg font-medium '>
-                            <Balancer>{item.description}</Balancer>
-                          </p>
+                          <p className='text-lg font-medium text-justify md:text-start'>{item.description}</p>
                         </div>
                       </Card>
                     ))}

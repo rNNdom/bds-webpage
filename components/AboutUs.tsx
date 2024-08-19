@@ -17,14 +17,14 @@ export default function AboutUs() {
           <div className='md:w-1/2  '>
             <div className='w-[90%]'>
               <span>
-                <p className='mb-4  md:text-end text-2xl '>
+                <p className='mb-4 text-justify  md:text-end text-2xl  '>
                   <Balancer>
                     Nos <strong>especializamos en brindar servicios de consultoría de BI y Big Data</strong> con un enfoque centrado en la <strong>excelencia, el compromiso y la experiencia.</strong>
                   </Balancer>
                 </p>
               </span>
               <span>
-                <p className='mb-4  md:text-end text-2xl  '>
+                <p className='mb-4 text-justify  md:text-end text-2xl  '>
                   <Balancer>
                     Gracias a nuestra experiencia, hemos logrado implementar <strong>soluciones que permiten a nuestros clientes sacar el máximo potencial de sus datos.</strong>
                   </Balancer>
