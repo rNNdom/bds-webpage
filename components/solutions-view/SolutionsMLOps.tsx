@@ -11,7 +11,7 @@ export default function SolutionsMLOps() {
       <Container className='text-center sm:p-2 not-prose'>
         <div className='flex flex-row items-center justify-around'>
           <div>
-            <Image src={MLOps} alt='placeholder' className='fill object-contain bg-white ' width={500} height={500} />
+            <Image src={MLOps} alt='Imágen del proceso correspondiente a MLOps' className='fill object-contain bg-white ' width={500} height={500} />
           </div>
           <div className='pl-10 w-3/6'>
             <h4 className='text-3xl font-bold text-center'>

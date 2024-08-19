@@ -21,7 +21,7 @@ export default function SolutionsIngestor() {
             </p>
           </div>
           <div className='border rounded-full overflow-hidden '>
-            <Image src={BDS4} alt='placeholder' className='fill object-cover bg-white h-56' width={450} height={350} />
+            <Image src={BDS4} alt='Imágen de un proceso que permite realizar ingestas en la nube' className='fill object-cover bg-white h-56' width={450} height={350} />
           </div>
         </div>
       </Container>

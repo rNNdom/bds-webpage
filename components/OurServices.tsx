@@ -3,7 +3,7 @@ import { Container, Section } from '@/components/craft'
 import React from 'react'
 import Balancer from 'react-wrap-balancer'
 import Image from 'next/image'
-import ServicesImage from '@/public/services-image.png'
+import ServicesImage from '@/public/ServicesImage.webp'
 import SectionTitle from './SectionTitle'
 
 export default function OurServices() {
@@ -24,8 +24,15 @@ export default function OurServices() {
             </p>
           </div>
           <div>
-            <div className='flex not-prose transition-all items-center w-[100%] max-h-[750px] max-w-[1000px] justify-center md:justify-start py-4 md:py-0 md:pb-0'>
-              <Image src={ServicesImage} alt='Persona dando una charla frente a gente.' className='max-w-[170%] rounded-bl-[600px] rounded-tl-[200px] image-box' placeholder='blur' />
+            <div className='flex not-prose transition-all items-center w-[110%] max-h-[750px] max-w-[1200px] justify-center md:justify-start py-4 md:py-0 md:pb-0'>
+              <Image
+                src={ServicesImage}
+                alt='Persona dando una charla frente a gente.'
+                className='max-w-[170%] rounded-bl-[600px] rounded-tl-[200px] image-box'
+                placeholder='blur'
+                priority={true}
+                sizes='100vw'
+              />
             </div>
           </div>
         </div>

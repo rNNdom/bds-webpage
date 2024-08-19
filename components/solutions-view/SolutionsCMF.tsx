@@ -21,7 +21,7 @@ export default function SolutionsCMF() {
             </p>
           </div>
           <div className='border overflow-hidden '>
-            <Image src={CMFImage} alt='placeholder' className='fill object-contain bg-white ' />
+            <Image src={CMFImage} alt='Imágen de procesos de unificación de datos' className='fill object-contain bg-white ' />
           </div>
         </div>
       </Container>
