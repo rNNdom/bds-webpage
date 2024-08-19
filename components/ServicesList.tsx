@@ -1,136 +1,12 @@
 'use client'
 import { Container, Section } from '@/components/craft'
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion'
-import BigData from '@/public/service-logos/BigDataWhite.svg'
-import DataService from '@/public/service-logos/DataServiceLogoWhite.svg'
-import ML from '@/public/service-logos/MLLogoWhite.svg'
-import SoftDev from '@/public/service-logos/SoftDevLogoWhite.svg'
-import BDS4 from '@/public/BDS4.png'
+
 import Image from 'next/image'
 import { useEffect, useRef, useState } from 'react'
 import { Card } from './ui/card'
-import Balancer from 'react-wrap-balancer'
+import { ServicesContent } from './iconExports'
 
-const Services: AccordeonProps[] = [
-  {
-    id: 'data-services',
-    question: 'Servicios de datos',
-    description: 'Brindamos el mejor servicio y experiencia con nuestro servicio de datos hacia nuestros clientes. Confía en nuestra experiencia.',
-    image: DataService,
-    contentList: [
-      {
-        image: BDS4,
-        title: 'Asesorías',
-        description: 'Asesorías integrales para encontrar la solución óptima antes las oportunidades de mejora presentes en tu empresa.'
-      },
-      {
-        image: BDS4,
-        title: 'Software factory',
-        description: 'Ofrecemos equipos transversales, capaces de realizar el levantamiento, desarrollo y QA, mediante un control continuo y ágil de los proyectos.'
-      },
-      {
-        image: BDS4,
-        title: 'Visualización',
-        description: 'Reportes, paneles, tableros personalizados a las necesidades del negocio, utilizando herramientas BI.'
-      },
-      {
-        image: BDS4,
-        title: 'Integración',
-        description: 'A través de herramientas ETL extraemos los datos desde los distintos orígenes para transformarlos y cargarlos según la petición del cliente.'
-      },
-      {
-        image: BDS4,
-        title: 'Outsourcing',
-        description: 'Deslíguese de la tarea de construir modelos de datos, procesos ETL y reportes, déjenos ayudarlos.'
-      },
-      {
-        image: BDS4,
-        title: 'Mantenimiento',
-        description: 'Correctivo, perfectivo y evolutivo sobre modelos de datos, procesos ETL, Reportes y arquitecturas BI/Big Data.'
-      },
-      {
-        image: BDS4,
-        title: 'Capacitación',
-        description: 'Ofrecemos capacitaciones a medida en las herramientas BI, ETL, Reportera, Big Data, Modelos de datos, etc.'
-      },
-      {
-        image: BDS4,
-        title: 'Proyectos y servicios DWH',
-        description: 'Diseñamos, construimos e implementamos Data Warehouses desde cero.'
-      }
-    ]
-  },
-  {
-    id: 'bigdata-services',
-    question: 'Servicios de Big Data',
-    description: 'Diseñamos e implementamos soluciones Big Data a la medida. Somos expertos en arquitecturas de Big Data.',
-    image: BigData,
-    contentList: [
-      {
-        image: BDS4,
-        title: 'Pruebas de Conceptos',
-        description: 'Realizamos pruebas de concepto e diferentes herramientas tanto BI como Big Data.'
-      },
-      {
-        image: BDS4,
-        title: 'Migraciones',
-        description: 'Debido a la evolución de las plataformas tecnológicas ofrecemos servicios de migración y actualización de plataformas.'
-      }
-    ]
-  },
-  {
-    id: 'software-services',
-    question: 'Desarrollo de Software',
-    description: 'Diseñamos e implementamos soluciones de software a la medida de nuestros clientes. Nos basamos en tecnología en la nube.',
-    image: SoftDev,
-    contentList: [
-      {
-        image: BDS4,
-        title: 'Desarrollo móvil',
-        description: 'Desarrollamos aplicaciones móviles nativas e híbridas para Android e iOS, utilizando tecnologías como Expo y React Native.'
-      },
-      {
-        image: BDS4,
-        title: 'Desarrollo de software',
-        description:
-          'Desarrollamos software a medida para plataformas web, adaptándonos a las necesidades específicas de nuestros clientes. Utilizamos tecnologías que operan en entornos con Node.js, como React, TypeScript, Next.js, JavaScript, HTML y CSS.'
-      },
-      {
-        image: BDS4,
-        title: 'Infraestructura en la Nube',
-        description:
-          'Diseñamos e implementamos soluciones robustas utilizando servicios en la nube, como AWS, para garantizar la escalabilidad, disponibilidad y seguridad de las aplicaciones. Nos enfocamos en crear infraestructuras eficientes que soporten el crecimiento y adaptabilidad de los proyectos, optimizando recursos y costos operativos.'
-      }
-    ]
-  },
-  {
-    id: 'ia-data',
-    question: 'Inteligencia artificial y automatización de procesos',
-    description:
-      'Diseñamos soluciones empresareiales basadas en los tópicos tecnológicos más recientes, usando inteligencia artificial (AI), aprendizaje automático (ML) y automatización robótica de procesos (RPA).',
-    image: ML,
-    contentList: [
-      {
-        image: BDS4,
-        title: 'Inteligencia artificial generativa',
-        description:
-          'Desarrollamos soluciones con inteligencia artificial generativa basadas en los modelos semánticos de OpenAI, con almacenamienmto y búsqueda vectorial en los activos de datos de tu empresa.'
-      },
-      {
-        image: BDS4,
-        title: 'Machine Learning',
-        description:
-          'Desarrollamos soluciones con inteligencia artificial generativa basadas en los modelos semánticos de OpenAI, con almacenamiento y búsqueda vectorial en los activos de datos de tu empresa.'
-      },
-      {
-        image: BDS4,
-        title: 'RPA',
-        description:
-          'Automatizamos tareas repetitivas y manuales, a traves de procesos RPA (Robotic Process Automation) personalizados, permitiendo a los equipos de trabajo optimizar sus tiempos de respuesta en sus procesos internos, mejorando así eficiencia y la productividad de tu empresa.'
-      }
-    ]
-  }
-]
 
 const ServicesList = () => {
   const [openAccordion, setOpenAccordion] = useState<string | null>(null)
@@ -161,7 +37,7 @@ const ServicesList = () => {
     <Section className='md:py-0 '>
       <Container>
         <div className='mt-4 flex flex-col gap-4 md:mt-8'>
-          {Services.map((service, index) => (
+          {ServicesContent.map((service, index) => (
             <Accordion
               key={index}
               type='single'
@@ -194,7 +70,7 @@ const ServicesList = () => {
                   <div className='pt-4'>
                     {service.contentList.map((item, index) => (
                       <Card key={index} className='flex flex-col md:flex-row p-4 gap-4 items-center text-white m-3 my-10 border-0 border-t-[1px] rounded-none bg-transparent'>
-                        <Image src={item.image} alt={item.title} width={120} height={120} className='rounded-lg border-2 bg-white' />
+                        <Image src={item.image} alt={item.title} width={115} height={115} className='rounded-lg bg-white p-4 ' />
                         <div className='p-3 pr-6 flex flex-grow flex-col items-center md:items-start text-center md:text-start '>
                           <p className='font-bold text-xl pb-4'>{item.title}</p>
                           <p className='text-lg font-medium text-justify md:text-start'>{item.description}</p>
