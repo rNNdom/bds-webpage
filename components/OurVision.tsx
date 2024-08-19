@@ -15,7 +15,7 @@ export default function AboutUs() {
         <div className='flex flex-col-reverse md:flex-row-reverse justify-center items-center gap-16'>
           <span className='w-4/5 flex not-prose'>
             <p className='mb-4 '>
-              <Balancer className='text-center md:text-end text-xl'>
+              <Balancer className='text-justify md:text-end text-xl'>
                 Nos proponemos consolidarnos a nivel nacional como una empresa <strong>sólida y responsable</strong>, capaz de generar la <strong>confianza necesaria</strong> en nuestros clientes para
                 que nos involucren en sus necesidades y proyectos actuales.
                 <br />

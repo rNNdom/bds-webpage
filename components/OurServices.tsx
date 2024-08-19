@@ -9,9 +9,9 @@ import SectionTitle from './SectionTitle'
 export default function OurServices() {
   return (
     <Section className='text-oxfordBlue  md:pt-0 pb-0 md:pb-0 not-prose py-0'>
-      <Container className='max-w-7xl text-center sm:p-0 not-prose py-0'>
-        <div className='flex flex-row items-center justify-center gap-10 services-section'>
-          <div className='pl-10 w-2/3 flex flex-col items-start gap-5'>
+      <Container className='max-w-7xl text-center sm:p-0 not-prose py-0 p-0'>
+        <div className='flex flex-row items-center justify-center gap-10 services-section mx-10'>
+          <div className='md:w-2/3 flex flex-col items-start gap-5'>
             <SectionTitle>Servicios</SectionTitle>
 
             <p className='mb-4'>

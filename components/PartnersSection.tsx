@@ -43,7 +43,7 @@ export default function PartnersSection() {
                   <span className='items-center justify-center'>{icon}</span>
                   <h4 className='font-bold text-xl'>{title}</h4>
                 </span>
-                <p className='w-4/5 text-lg' dangerouslySetInnerHTML={{ __html: description }}></p>
+                <p className='w-4/5 text-lg text-justify' dangerouslySetInnerHTML={{ __html: description }}></p>
               </div>
             </a>
           ))}
