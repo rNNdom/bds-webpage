@@ -9,7 +9,7 @@ export default function AboutUs() {
     <Section className='py-0 md:py-0 not-prose'>
       <Container className='max-w-full p-0 sm:p-0 mx-0'>
         <div className='flex about-us flex-row items-center gap-4 justify-between'>
-          <div className='not-prose py-4 md:py-0 md:pb-0 h-[45vw] relative w-[70%] '>
+          <div className='not-prose py-4 md:py-0 md:pb-0 h-[40vw] relative w-[70%] '>
             <Image src={IMAGE2} alt='Persona dando una charla frente a gente.' className='image-box object-cover rounded-br-[700px]' placeholder='blur' sizes='70vw' priority fill />
           </div>
           <div className='md:w-1/2  '>
