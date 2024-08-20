@@ -9,9 +9,9 @@ import SectionTitle from './SectionTitle'
 export default function OurServices() {
   return (
     <Section className='text-oxfordBlue  md:pt-0 pb-0 md:pb-0 not-prose py-0'>
-      <Container className='max-w-7xl text-center sm:p-0 not-prose py-0 p-0'>
-        <div className='flex flex-row items-center justify-center gap-10 services-section mx-10'>
-          <div className='md:w-2/3 flex flex-col items-start gap-5'>
+      <Container className='max-w-full p-0 sm:p-0 mx-0'>
+        <div className='flex flex-row items-center justify-center gap-5 services-section'>
+          <div className='md:w-2/3 flex flex-col items-start gap-5 ml-16'>
             <SectionTitle>Servicios</SectionTitle>
 
             <p className='mb-4'>
@@ -23,17 +23,16 @@ export default function OurServices() {
               </Balancer>
             </p>
           </div>
-          <div>
-            <div className='flex not-prose transition-all items-center w-[110%] max-h-[750px] max-w-[1200px] justify-center md:justify-start py-4 md:py-0 md:pb-0'>
-              <Image
-                src={ServicesImage}
-                alt='Persona dando una charla frente a gente.'
-                className='max-w-[170%] rounded-bl-[600px] rounded-tl-[200px] image-box'
-                placeholder='blur'
-                priority={true}
-                sizes='100vw'
-              />
-            </div>
+          <div className='not-prose py-4 md:py-0 md:pb-0 h-[45vw] relative w-[75%] rounded-full '>
+            <Image
+              src={ServicesImage}
+              alt='Mujer dando una charla frente a gente.'
+              className='image-box object-cover rounded-tl-[300px] rounded-bl-[500px]'
+              placeholder='blur'
+              sizes='85vw'
+              priority
+              fill
+            />
           </div>
         </div>
       </Container>

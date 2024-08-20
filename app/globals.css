@@ -233,6 +233,7 @@
     .about-us > div:first-child {
       margin: 1rem 0 0 0;
       display: flex;
+      width: 75%;
     }
     .about-us > div:first-child > div {
       align-items: center;
@@ -246,7 +247,7 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      width: 100%;
+      width: 90%;
     }
 
     .about-us > div:last-child > div > span > p {
@@ -268,8 +269,12 @@
       align-items: center;
       justify-content: center;
       padding-top: 1rem;
-      width: 100%;
+      width: 80%;
       padding-bottom: 1rem;
+    }
+    .services-section > div:first-child {
+      margin-top: 1rem;
+      margin-left: 0;
     }
     .services-section > div:first-child > p > span {
       text-align: justify;

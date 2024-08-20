@@ -29,8 +29,8 @@ const IntialSection = () => {
                 alt='Mujer analizando datos en un computador'
                 className=' image-rounded max-w-[150%] rounded-bl-[500px] rounded-tl-[500px]'
                 placeholder='blur'
-                sizes='100vw'
-                priority={true}
+                sizes='80vw'
+                priority
               />
             </div>
           </div>
