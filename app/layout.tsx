@@ -42,20 +42,20 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 const Nav = ({ className, children, id }: NavProps) => {
   return (
     <nav className={cn('sticky z-50 top-0 bg-bgBlueColor border-bgBlueColor', 'border-b', 'fade-in', className)} id={id}>
-      <div id='nav-container' className='max-w-5xl mx-auto px-6 sm:px-8 flex justify-between items-center text-white'>
+      <div id='nav-container' className='max-w-5xl mx-auto px-4 sm:px-4 flex justify-between items-center text-white'>
         <Link className='hover:opacity-75 transition-all flex gap-2 items-center h-24 w-40 min-w-40' href='/'>
           <Image src={BDSLOGO1} alt='Logo' className='object-contain' />
         </Link>
         {children}
-        <div className='flex items-center gap-2 '>
-          <div className='mx-14 hidden md:flex gap-10 '>
+        <div className='flex items-center gap-10 '>
+          <div className='hidden md:flex gap-8 '>
             {Object.entries(mainMenu).map(([key, href]) => (
               <Button key={href} asChild className='text-lg' variant='ghost'>
                 <Link href={href}>{key.charAt(0).toUpperCase() + key.slice(1)}</Link>
               </Button>
             ))}
           </div>
-          <Button asChild className='hidden sm:flex bg-buttonTealColor font-semibold text-md transition-all hover:-mt-1 '>
+          <Button asChild className='hidden md:flex bg-buttonTealColor font-semibold text-md transition-all hover:-mt-1 '>
             <Link href='/about-us#contact-form'>Contáctanos</Link>
           </Button>
           <MobileNav />

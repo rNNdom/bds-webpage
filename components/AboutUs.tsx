@@ -9,10 +9,8 @@ export default function AboutUs() {
     <Section className='py-0 md:py-0 not-prose'>
       <Container className='max-w-full p-0 sm:p-0 mx-0'>
         <div className='flex about-us flex-row items-center gap-4 justify-between'>
-          <div>
-            <div className='flex not-prose transition-all items-center w-[100%] max-h-[750px] max-w-[1000px] justify-center md:justify-end py-4 md:py-0 md:pb-0'>
-              <Image src={IMAGE2} alt='Persona dando una charla frente a gente.' className='max-w-[150%] rounded-br-[700px] image-box' placeholder='blur' sizes='100vw' priority={true} />
-            </div>
+          <div className='not-prose py-4 md:py-0 md:pb-0 h-[45vw] relative w-[70%] '>
+            <Image src={IMAGE2} alt='Persona dando una charla frente a gente.' className='image-box object-cover rounded-br-[700px]' placeholder='blur' sizes='70vw' priority fill />
           </div>
           <div className='md:w-1/2  '>
             <div className='w-[90%]'>
