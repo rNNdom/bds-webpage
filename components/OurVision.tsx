@@ -6,13 +6,13 @@ import Image from 'next/image'
 import logo_vision from '@/public/about-us/logo_vision.svg'
 import SectionTitle from './SectionTitle'
 
-export default function AboutUs() {
+export default function OurVision() {
   return (
     <Section className='text-oxfordBlue   md:pt-0 pb-0 md:pb-0 not-prose'>
-      <Container className='flex flex-col gap-6 items-center md:pt-0 pt-0'>
+      <Container className='flex flex-col gap-6 items-center p-0'>
         <SectionTitle width='w-2/3'>Nuestra Visión</SectionTitle>
 
-        <div className='flex flex-col-reverse md:flex-row-reverse justify-center items-center gap-16'>
+        <div className='flex flex-col-reverse md:flex-row-reverse justify-center items-center gap-5 '>
           <span className='w-4/5 flex not-prose'>
             <p className='mb-4 '>
               <Balancer className='text-justify md:text-end text-xl'>
@@ -24,7 +24,7 @@ export default function AboutUs() {
               </Balancer>
             </p>
           </span>
-          <span className='not-prose flex w-1/3 justify-center'>
+          <span className='not-prose flex w-5/12 sm:w-3/12 justify-center'>
             <Image src={logo_vision} alt='Logo que muestra una persona en la retina de un ojo, visión' className=' w-48 h-48' />
           </span>
         </div>

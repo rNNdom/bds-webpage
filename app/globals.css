@@ -177,12 +177,12 @@
     }
   }
   @media (width <= 290px) {
-    .hidden-minimum-width {
-      display: none;
-    }
     .column-minimum-width {
-      flex-direction: column;
-      display: flex;
+      flex-direction: column !important;
+      display: flex !important;
+    }
+    .hidden-minimum-width {
+      display: none !important;
     }
     .centered-text-min-width {
       text-align: center;
@@ -237,15 +237,11 @@
     }
 
     .about-us > div:first-child {
-      margin: 1rem 0 0 0;
+      margin: 2rem 0 0 0;
       display: flex;
       width: 75%;
     }
-    .about-us > div:first-child > div {
-      align-items: center;
-      justify-content: center;
-      padding-bottom: 0px;
-    }
+
     .about-us > div:last-child {
       margin: 1rem 0 0 0;
       padding-bottom: 10px;
