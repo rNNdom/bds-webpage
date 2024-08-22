@@ -7,12 +7,12 @@ import logo_mision from '@/public/about-us/logo_mision.svg'
 import SectionTitle from './SectionTitle'
 export default function OurMission() {
   return (
-    <Section className='text-oxfordBlue  md:pt-0 pb-0 md:pb-0 not-prose'>
-      <Container className='flex flex-col gap-6 items-center'>
+    <Section className='text-oxfordBlue  pt-0 md:pt-0 pb-0 md:pb-0 not-prose'>
+      <Container className='flex flex-col gap-6 items-center p-0'>
         <SectionTitle width='w-2/3'>Nuestra Misión</SectionTitle>
 
-        <div className='flex flex-col md:flex-row-reverse items-center gap-16 md:gap-0'>
-          <span className='not-prose flex w-1/3 justify-center'>
+        <div className='flex flex-col md:flex-row-reverse items-center gap-7 md:gap-0'>
+          <span className='not-prose flex w-5/12 sm:w-3/12 justify-center'>
             <Image src={logo_mision} alt='Imágen que muestra un destino, misión' className='w-48 h-48' />
           </span>
           <span className='not-prose flex w-4/5'>

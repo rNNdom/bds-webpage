@@ -8,7 +8,6 @@ import StatisticsSection from '@/components/StatisticsSection'
 import TeamLeaders from '@/components/TeamLeaders'
 
 export default function Home() {
-
   return (
     <Section className='md:py-0 py-0'>
       <Section className='md:py-0 text-oxfordBlue py-0 bg-bds-background-texture-3 bg-cover '>
@@ -18,11 +17,11 @@ export default function Home() {
       </Section>
 
       <Section className='md:pt-10 text-white pt-10 py-0 bg-bds-background-gradient-1 bg-cover'>
-       <StatisticsSection />
+        <StatisticsSection />
       </Section>
 
       <Section className='py-0 md:py-0 bg-cover bg-parent'>
-        <Section className='md:pt-10 text-oxfordBlue pt-10'>
+        <Section>
           <Container className='text-center sm:p-2 max-w-max not-prose'>
             <OurMission />
           </Container>
@@ -43,7 +42,7 @@ export default function Home() {
         </div>
 
         <div className='md:pt-10 text-oxfordBlue pt-10 '>
-          <Container className='text-center sm:p-2 max-w-max not-prose'>
+          <Container className='text-center sm:p-6 max-w-max not-prose'>
             <TeamLeaders />
           </Container>
         </div>

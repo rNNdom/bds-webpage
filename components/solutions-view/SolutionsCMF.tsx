@@ -1,6 +1,6 @@
 import React from 'react'
 import { Container, Section } from '@/components/craft'
-import CMFImage from '@/public/CMFImage.png'
+import CMFImage from '@/public/solutions-icons/CMF.webp'
 import Balancer from 'react-wrap-balancer'
 import Image from 'next/image'
 import SectionTitle from '../SectionTitle'
@@ -24,7 +24,7 @@ export default function SolutionsCMF() {
             </p>
           </div>
           <div className='border overflow-hidden '>
-            <Image src={CMFImage} alt='Imágen de procesos de unificación de datos' className='fill object-contain bg-white ' />
+            <Image src={CMFImage} alt='Imágen de procesos de unificación de datos' className='fill object-contain bg-white ' unoptimized placeholder='blur' />
           </div>
         </div>
       </Container>

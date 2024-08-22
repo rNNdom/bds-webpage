@@ -27,7 +27,7 @@ const carrouselItems = [
     image: CCSUD,
     alt: 'Logo Cencosud Scotiabank',
     label: 'Cencosud Scotiabank',
-    style: 'object-contain w-10/12 -mt-4 object-center item-center justify-center'
+    style: 'object-contain w-[90%] h-[90%] '
   },
   {
     id: 3,
@@ -77,37 +77,39 @@ export function ClientsSection() {
 
   return (
     <div className='relative w-full z-10 pb-5 '>
-      <Carousel setApi={setApi} className='w-full flex flex-col items-center overflow-hidden'>
+      <Carousel setApi={setApi} className='w-full flex flex-col items-center '>
         <SectionTitle>Principales Clientes</SectionTitle>
         <CarouselPrevious
           style={{
             backgroundColor: 'var(--background)'
           }}
-          className=' hide-responsive'
+          className='hidden lg:flex items-center '
         />
-        <CarouselContent className='mt-6 md:mt-12 flex flex-col md:flex-row '>
-          {carrouselItems.map((item) => (
-            <CarouselItem key={item.id} className='md:basis-1/3 sm:basis-2/12 basis-2/12 pl-2'>
-              <div className='p-2 object-contain '>
-                <Card>
-                  <CardContent className='flex aspect-square items-center justify-center p-6 w-72 md:w-fit flex-col '>
-                    <span className='h-2/3 items-center flex justify-center'>
-                      <Image src={item.image} alt={item.alt} className={item.style} />
-                    </span>
-                    <p className='text-oxfordBlue font-bold text-xl text-center'>
-                      <Balancer>{item.label}</Balancer>
-                    </p>
-                  </CardContent>
-                </Card>
-              </div>
-            </CarouselItem>
-          ))}
-        </CarouselContent>
+        <div className='overflow-hidden w-[100%] '>
+          <CarouselContent className='mt-6 md:mt-12 flex flex-col md:flex-row'>
+            {carrouselItems.map((item) => (
+              <CarouselItem key={item.id} className='sm:basis-1/3 basis-2/12 pl-2'>
+                <div className='p-2 object-contain  flex items-center justify-center'>
+                  <Card className='w-[50vw] md:w-[100%] '>
+                    <CardContent className='flex aspect-square w-full p-2 sm:p-6  flex-col justify-around'>
+                      <span className='h-2/3 flex items-center justify-center'>
+                        <Image src={item.image} alt={item.alt} className={item.style} />
+                      </span>
+                      <p className='hidden-client-text text-oxfordBlue font-bold text-xl text-center '>
+                        <Balancer>{item.label}</Balancer>
+                      </p>
+                    </CardContent>
+                  </Card>
+                </div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+        </div>
         <CarouselNext
           style={{
             backgroundColor: 'var(--background)'
           }}
-          className='hide-responsive'
+          className='hidden lg:flex items-center '
         />
       </Carousel>
       <div className='absolute left-0 right-0 md:flex justify-center space-x-2 pt-7 hidden'>

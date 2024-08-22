@@ -11,7 +11,7 @@ export default function OurServices() {
     <Section className='text-oxfordBlue  md:pt-0 pb-0 md:pb-0 not-prose py-0'>
       <Container className='max-w-full p-0 sm:p-0 mx-0'>
         <div className='flex flex-row items-center justify-center gap-5 services-section'>
-          <div className='md:w-2/3 flex flex-col items-start gap-5 ml-16'>
+          <div className='md:w-1/2 flex flex-col items-start gap-5 ml-44'>
             <SectionTitle>Servicios</SectionTitle>
 
             <p className='mb-4'>
@@ -23,16 +23,8 @@ export default function OurServices() {
               </Balancer>
             </p>
           </div>
-          <div className='not-prose py-4 md:py-0 md:pb-0 h-[45vw] relative w-[75%] rounded-full '>
-            <Image
-              src={ServicesImage}
-              alt='Mujer dando una charla frente a gente.'
-              className='image-box object-cover rounded-tl-[300px] rounded-bl-[500px]'
-              placeholder='blur'
-              sizes='85vw'
-              priority
-              fill
-            />
+          <div className='not-prose py-4 md:py-0 md:pb-0 h-[40vw] relative w-[70%] rounded-full '>
+            <Image src={ServicesImage} alt='Mujer dando una charla frente a gente.' className='services-image-box object-cover rounded-bl-[700px]' placeholder='blur' sizes='95vw' priority fill />
           </div>
         </div>
       </Container>

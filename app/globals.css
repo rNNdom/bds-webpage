@@ -171,17 +171,23 @@
     background-repeat: no-repeat;
     background-position: center;
   }
-
-  @media (768px <= width <= 1024px) {
-    .hide-responsive {
+  @media (width <= 420px) {
+    .hidden-client-text {
       display: none;
     }
-    .responsive-column {
-      flex: 1;
-      flex-direction: column;
+  }
+  @media (width <= 290px) {
+    .column-minimum-width {
+      flex-direction: column !important;
+      display: flex !important;
+    }
+    .hidden-minimum-width {
+      display: none !important;
+    }
+    .centered-text-min-width {
+      text-align: center;
     }
   }
-
   @media (width <= 550px) {
     .team-leaders-section {
       display: flex;
@@ -231,15 +237,11 @@
     }
 
     .about-us > div:first-child {
-      margin: 1rem 0 0 0;
+      margin: 2rem 0 0 0;
       display: flex;
       width: 75%;
     }
-    .about-us > div:first-child > div {
-      align-items: center;
-      justify-content: center;
-      padding-bottom: 0px;
-    }
+
     .about-us > div:last-child {
       margin: 1rem 0 0 0;
       padding-bottom: 10px;
@@ -256,7 +258,8 @@
       padding-right: 2rem;
       font-size: 1.25rem;
     }
-
+  }
+  @media (width <= 1200px) {
     .services-section {
       display: flex;
       flex-direction: column;
@@ -268,19 +271,18 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      padding-top: 1rem;
       width: 80%;
       padding-bottom: 1rem;
     }
     .services-section > div:first-child {
-      margin-top: 1rem;
       margin-left: 0;
+      margin-right: 0;
     }
     .services-section > div:first-child > p > span {
       text-align: justify;
     }
     .services-section > div:last-child {
-      margin-bottom: 1rem;
+      margin-bottom: 2rem;
       padding-top: 0px;
     }
 
@@ -290,8 +292,15 @@
       align-items: center;
       justify-content: center;
     }
-  }
 
+    .services-image-box {
+      width: 84%;
+      border-radius: 0%;
+      border-width: 1px;
+      border-color: #fff;
+      box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.4);
+    }
+  }
   @media (width >= 768px) {
     .container-height {
       height: 600px;

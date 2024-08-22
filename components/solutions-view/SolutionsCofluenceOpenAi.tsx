@@ -3,7 +3,7 @@ import { Container, Section } from '@/components/craft'
 
 import Balancer from 'react-wrap-balancer'
 import Image from 'next/image'
-import Logo from '@/public/service-logos/MLLogo.svg'
+import Logo from '@/public/solutions-icons/OpenAI.webp'
 import SectionTitle from '../SectionTitle'
 
 export default function SolutionsCofOpenAI() {
@@ -12,9 +12,9 @@ export default function SolutionsCofOpenAI() {
       <Container className='text-center not-prose'>
         <div className='flex flex-col-reverse md:flex-row-reverse items-center justify-around'>
           <div>
-            <Image src={Logo} alt='placeholder' className='object-contain' width={170} height={170} />
+            <Image src={Logo} alt='placeholder' className='object-contain' placeholder='blur' unoptimized />
           </div>
-          <div className='w-full md:w-4/6 '>
+          <div className='pr-0 md:pr-10 w-full md:w-4/6 '>
             <span className='flex justify-start  w-full'>
               <SectionTitle width='w-1/2' className='text-3xl'>
                 Cofluence + OpenAI

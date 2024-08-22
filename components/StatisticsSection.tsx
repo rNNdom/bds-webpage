@@ -1,4 +1,3 @@
-'use client'
 import React from 'react'
 import { Container } from './craft'
 import IconCert from '@/public/about-us/icon_certs.svg'

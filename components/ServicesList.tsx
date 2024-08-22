@@ -7,7 +7,6 @@ import { useEffect, useRef, useState } from 'react'
 import { Card } from './ui/card'
 import { ServicesContent } from './iconExports'
 
-
 const ServicesList = () => {
   const [openAccordion, setOpenAccordion] = useState<string | null>(null)
   const sectionRefs = useRef<{ [key: string]: HTMLElement | null }>({})
