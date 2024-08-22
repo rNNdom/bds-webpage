@@ -171,17 +171,23 @@
     background-repeat: no-repeat;
     background-position: center;
   }
-
-  @media (768px <= width <= 1024px) {
-    .hide-responsive {
+  @media (width <= 420px) {
+    .hidden-client-text {
       display: none;
     }
-    .responsive-column {
-      flex: 1;
+  }
+  @media (width <= 290px) {
+    .hidden-minimum-width {
+      display: none;
+    }
+    .column-minimum-width {
       flex-direction: column;
+      display: flex;
+    }
+    .centered-text-min-width {
+      text-align: center;
     }
   }
-
   @media (width <= 550px) {
     .team-leaders-section {
       display: flex;

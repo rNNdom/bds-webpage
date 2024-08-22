@@ -3,7 +3,7 @@ import Image from 'next/image'
 import { Container, Section } from './craft'
 import SectionTitle from './SectionTitle'
 export default function TeamLeaders() {
-  const leaders = Array(5).fill({ name: 'Nombre Apellido', description: 'Descripción', businessSeal: 'BDS SpA' })
+  const leaders = Array(9).fill({ name: 'Nombre Apellido', description: 'Descripción', businessSeal: 'BDS SpA' })
 
   return (
     <Section className='relative z-50 text-oxfordBlue  md:pt-0 pb-0 md:pb-0 not-prose'>

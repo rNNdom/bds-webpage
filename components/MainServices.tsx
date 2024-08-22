@@ -1,4 +1,3 @@
-'use client'
 // Layout
 import * as Craft from '@/components/craft'
 
@@ -14,11 +13,11 @@ import SectionTitle from './SectionTitle'
 const MainServices = () => {
   return (
     <Craft.Section className='relative z-10 '>
-      <Craft.Container className='not-prose max-w-7xl'>
+      <Craft.Container className='p-0 sm:p-0 not-prose max-w-7xl'>
         <div className='flex flex-col gap-6 items-center'>
           <SectionTitle>Principales Servicios</SectionTitle>
-          <div className='md:relative flex p-4 md:vertical-line flex-col md:flex-row max-h-fit md:max-h-max md:gap-0 gap-2'>
-            <div className='container-height left-services flex flex-col md:pr-5 md:justify-between gap-2'>
+          <div className='md:relative flex p-5 md:vertical-line flex-col md:flex-row max-h-fit md:max-h-max gap-10'>
+            <div className='container-height left-services flex flex-col md:justify-between gap-2'>
               <div className='blank-space h-1/6' />
               <LeftServiceElement
                 image={BigData}
@@ -36,7 +35,7 @@ const MainServices = () => {
                 href='/services#software-services'
               />
             </div>
-            <div className='container-height right-services flex flex-col md:justify-between md:pl-7 gap-2'>
+            <div className='container-height right-services flex flex-col md:justify-between gap-2'>
               <RightServiceElement
                 image={DataService}
                 title='Servicio de Datos'

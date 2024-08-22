@@ -2,7 +2,7 @@ import { Container, Section } from '@/components/craft'
 import React from 'react'
 import Balancer from 'react-wrap-balancer'
 import Image from 'next/image'
-import IMAGE2 from '@/public/IMAGEN2.jpg'
+import HeroImage from '@/public/about-us/aboutus.jpeg'
 
 export default function AboutUs() {
   return (
@@ -10,7 +10,7 @@ export default function AboutUs() {
       <Container className='max-w-full p-0 sm:p-0 mx-0'>
         <div className='flex about-us flex-row items-center gap-4 justify-between'>
           <div className='not-prose py-4 md:py-0 md:pb-0 h-[40vw] relative w-[70%] '>
-            <Image src={IMAGE2} alt='Persona dando una charla frente a gente.' className='image-box object-cover rounded-br-[700px]' placeholder='blur' sizes='70vw' priority fill />
+            <Image src={HeroImage} alt='Personas chocando puños representando trabajo en equipo' className='image-box object-cover rounded-br-[700px]' placeholder='blur' unoptimized priority fill />
           </div>
           <div className='md:w-1/2  '>
             <div className='w-[90%]'>
