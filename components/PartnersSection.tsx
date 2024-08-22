@@ -39,10 +39,10 @@ export default function PartnersSection() {
           {featureText.map(({ icon, title, description, href }, index) => (
             <a href={href} className='flex rounded-lg p-6 transition-all hover:-mt-2 hover:mb-2 bg-white bg-opacity-5 md:w-fit ' key={index}>
               <div className='flex flex-col  items-center'>
-                <span className='pr-7 p-10 flex  flex-col gap-6 '>
+                <div className='pr-7 p-10 flex  flex-col gap-6 '>
                   <span className='items-center justify-center'>{icon}</span>
                   <h4 className='font-bold text-xl'>{title}</h4>
-                </span>
+                </div>
                 <p className='w-4/5 text-lg text-justify' dangerouslySetInnerHTML={{ __html: description }}></p>
               </div>
             </a>

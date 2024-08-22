@@ -3,6 +3,7 @@ import React from 'react'
 import Balancer from 'react-wrap-balancer'
 import { Section, Container } from './craft'
 import { Button } from './ui/button'
+import SectionTitle from './SectionTitle'
 
 function ContactUs() {
   // const handleSubmit = async (e) => {
@@ -44,9 +45,9 @@ function ContactUs() {
   return (
     <Section className='text-oxfordBlue  md:pt-0 pb-0 md:pb-0 not-prose transition-all'>
       <Container id='contact-form' className='text-center sm:p-2 not-prose'>
-        <h3 className='text-4xl font-bold text-center pb-10 text-white'>
-          <Balancer>Contáctanos</Balancer>
-        </h3>
+        <span className='flex flex-col items-center pb-4'>
+          <SectionTitle className='text-white'>Contáctanos</SectionTitle>
+        </span>
 
         <form onSubmit={handleSubmit}>
           <div className='grid md:grid-cols-2 grid-cols-1 gap-4'>
