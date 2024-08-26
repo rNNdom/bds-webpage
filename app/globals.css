@@ -175,6 +175,14 @@
     .hidden-client-text {
       display: none;
     }
+    .services-list-accordion {
+      padding: 0 !important;
+      border-radius: 0% !important;
+    }
+    .services-list-accordion > div {
+      padding: 5px !important;
+      border-radius: 0% !important;
+    }
   }
   @media (width <= 290px) {
     .column-minimum-width {

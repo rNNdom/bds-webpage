@@ -33,9 +33,9 @@ const ServicesList = () => {
   }
 
   return (
-    <Section className='md:py-0 '>
+    <Section className='md:py-0 services-list-accordion'>
       <Container>
-        <div className='mt-4 flex flex-col gap-4 md:mt-8'>
+        <div className='mt-4 flex flex-col gap-4 md:mt-8 '>
           {ServicesContent.map((service, index) => (
             <Accordion
               key={index}
@@ -49,32 +49,34 @@ const ServicesList = () => {
             >
               <AccordionItem
                 value={service.question}
-                className='rounded-md px-4 transition-all bg-gradient-to-r border-0 from-bgDarkGreen to-bgGreenColor '
+                className='rounded-md px-4 sm:px-10 transition-all bg-gradient-to-r border-0 from-bgDarkGreen to-bgGreenColor '
                 ref={(element) => {
                   sectionRefs.current[service.id] = element
                 }}
               >
-                <AccordionTrigger className='flex flex-col md:flex-row hover:no-underline gap-10 px-6' onClick={() => handleAccordionToggle(service.id)}>
-                  <Image src={service.image} alt={service.question} width={90} height={90} className=' object-fit' />
-                  <div className='flex flex-col text-start'>
-                    <span className='flex flex-col w-fit '>
-                      <p className='text-2xl font-bold'>{service.question}</p>
-                      <span className={`block border-bgGreenColor border-b-[3px] w-1/2`} />
-                    </span>
-                    <p className='text-lg font-semibold pt-3'>{service.description}</p>
+                <AccordionTrigger className='flex flex-col sm:flex-row hover:no-underline sm:px-4 gap-2 ' onClick={() => handleAccordionToggle(service.id)}>
+                  <div className='flex flex-col sm:flex-row gap-5 justify-center items-center'>
+                    <Image src={service.image} alt={service.question} width={90} height={90} className=' object-fit' />
+                    <div className='flex flex-col text-justify sm:text-start px-3'>
+                      <span className='flex flex-col w-fit'>
+                        <p className='text-2xl font-semibold text-center sm:text-start '>{service.question}</p>
+                        <span className={`block border-bgGreenColor border-b-[3px] w-2/3`} />
+                      </span>
+                      <p className='text-lg font-medium pt-3 hidden-client-text'>{service.description}</p>
+                    </div>
                   </div>
                 </AccordionTrigger>
 
                 <AccordionContent className='text-base  '>
                   <div className='pt-4'>
                     {service.contentList.map((item, index) => (
-                      <Card key={index} className='flex flex-col md:flex-row p-4 gap-4 items-center text-white m-3 my-10 border-0 border-t-[1px] rounded-none bg-transparent'>
-                        <div className='bg-white p-2 rounded-lg flex border-bgGreenColor border'>
-                          <span className='relative min-w-[95px] max-w-[95px] min-h-[95px] max-h-[95px]'>
+                      <Card key={index} className='flex flex-col md:flex-row py-4 gap-4 items-center text-white my-6 border-0 border-t-[1px] rounded-none bg-transparent'>
+                        <div className='bg-white p-2 rounded-lg flex border-bgGreenColor border '>
+                          <span className='relative min-w-[95px] max-w-[95px] min-h-[95px] max-h-[95px] '>
                             <Image src={item.image} alt={item.title} fill objectFit='contain' />
                           </span>
                         </div>
-                        <span className='p-3 pr-6 flex flex-grow flex-col items-center md:items-start text-center md:text-start '>
+                        <span className='p-3 flex flex-grow flex-col items-center md:items-start text-center md:text-start '>
                           <p className='font-bold text-xl pb-4'>{item.title}</p>
                           <p className='text-lg font-medium text-justify md:text-start'>{item.description}</p>
                         </span>

@@ -12,7 +12,7 @@ export default function page() {
       </Section>
       <Section className=' bg-bds-background-gradient-1 text-white pt-10 md:py-0 '>
         <div className='bg-bds-background-texture-1 bg-cover bg-no-repeat border-b border-bgGreenColor'>
-          <Container className='not-prose'>
+          <Container className='not-prose services-list-accordion '>
             <ServicesList />
           </Container>
         </div>
