@@ -69,11 +69,15 @@ const ServicesList = () => {
                   <div className='pt-4'>
                     {service.contentList.map((item, index) => (
                       <Card key={index} className='flex flex-col md:flex-row p-4 gap-4 items-center text-white m-3 my-10 border-0 border-t-[1px] rounded-none bg-transparent'>
-                        <Image src={item.image} alt={item.title} width={115} height={115} className='rounded-lg bg-white p-4 ' />
-                        <div className='p-3 pr-6 flex flex-grow flex-col items-center md:items-start text-center md:text-start '>
+                        <div className='bg-white p-2 rounded-lg flex border-bgGreenColor border'>
+                          <span className='relative min-w-[95px] max-w-[95px] min-h-[95px] max-h-[95px]'>
+                            <Image src={item.image} alt={item.title} fill objectFit='contain' />
+                          </span>
+                        </div>
+                        <span className='p-3 pr-6 flex flex-grow flex-col items-center md:items-start text-center md:text-start '>
                           <p className='font-bold text-xl pb-4'>{item.title}</p>
                           <p className='text-lg font-medium text-justify md:text-start'>{item.description}</p>
-                        </div>
+                        </span>
                       </Card>
                     ))}
                   </div>

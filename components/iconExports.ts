@@ -39,7 +39,6 @@ import BigData from '@/public/service-logos/BigDataWhite.svg'
 import DataService from '@/public/service-logos/DataServiceLogoWhite.svg'
 import ML from '@/public/service-logos/MLLogoWhite.svg'
 import SoftDev from '@/public/service-logos/SoftDevLogoWhite.svg'
-import BDS4 from '@/public/BDS4.png'
 
 import Asesorias from '@/public/service-logos/service-list/asesorias.png'
 import Outsourcing from '@/public/service-logos/service-list/outsourcing.png'
@@ -51,6 +50,12 @@ import Capacitacion from '@/public/service-logos/service-list/training.png'
 import Migraciones from '@/public/service-logos/service-list/migrations.png'
 import PruebasConcepto from '@/public/service-logos/service-list/concept-testing.png'
 import ServiciosDWH from '@/public/service-logos/service-list/dwh-services.png'
+import DesarrolloMovil from '@/public/service-logos/service-list/desarrollo-mobile.svg'
+import DesarrolloSoftware from '@/public/service-logos/service-list/software-dev.svg'
+import InfraestructuraNube from '@/public/service-logos/service-list/infraestructura-nube.svg'
+import MachineLearning from '@/public/service-logos/service-list/machine-learning.svg'
+import RPA from '@/public/service-logos/service-list/RPA-icon.svg'
+import IAIcon from '@/public/service-logos/service-list/ia-icon.svg'
 
 export const TechnologiesContent: AccordeonProps[] = [
   {
@@ -296,18 +301,18 @@ export const ServicesContent: AccordeonProps[] = [
     image: SoftDev,
     contentList: [
       {
-        image: BDS4,
+        image: DesarrolloMovil,
         title: 'Desarrollo móvil',
         description: 'Desarrollamos aplicaciones móviles nativas e híbridas para Android e iOS, utilizando tecnologías como Expo y React Native.'
       },
       {
-        image: BDS4,
+        image: DesarrolloSoftware,
         title: 'Desarrollo de software',
         description:
           'Desarrollamos software a medida para plataformas web, adaptándonos a las necesidades específicas de nuestros clientes. Utilizamos tecnologías que operan en entornos con Node.js, como React, TypeScript, Next.js, JavaScript, HTML y CSS.'
       },
       {
-        image: BDS4,
+        image: InfraestructuraNube,
         title: 'Infraestructura en la Nube',
         description:
           'Diseñamos e implementamos soluciones robustas utilizando servicios en la nube, como AWS, para garantizar la escalabilidad, disponibilidad y seguridad de las aplicaciones. Nos enfocamos en crear infraestructuras eficientes que soporten el crecimiento y adaptabilidad de los proyectos, optimizando recursos y costos operativos.'
@@ -322,19 +327,19 @@ export const ServicesContent: AccordeonProps[] = [
     image: ML,
     contentList: [
       {
-        image: BDS4,
+        image: IAIcon,
         title: 'Inteligencia artificial generativa',
         description:
           'Creamos soluciones con inteligencia artificial generativa que producen contenido original, adaptado a las necesidades específicas de tu negocio. Aprovechamos técnicas avanzadas de almacenamiento y búsqueda de datos para gestionar grandes volúmenes de información de manera eficiente.'
       },
       {
-        image: BDS4,
+        image: MachineLearning,
         title: 'Machine Learning',
         description:
           'Desarrollamos soluciones de Machine Learning que mejoran la precisión en la toma de decisiones y optimizan procesos a través del análisis predictivo. Utilizamos métodos avanzados para gestionar y analizar datos de manera rápida y efectiva.'
       },
       {
-        image: BDS4,
+        image: RPA,
         title: 'RPA',
         description:
           'Automatizamos tareas repetitivas y manuales, a traves de procesos RPA (Robotic Process Automation) personalizados, permitiendo a los equipos de trabajo optimizar sus tiempos de respuesta en sus procesos internos, mejorando así eficiencia y la productividad de tu empresa.'

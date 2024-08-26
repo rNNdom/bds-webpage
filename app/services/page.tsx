@@ -4,8 +4,8 @@ import ServicesList from '@/components/ServicesList'
 
 export default function page() {
   return (
-    <Section className='md:py-0 '>
-      <Section className='md:pt-10 text-oxfordBlue  md:py-0 bg-services pt-0 py-0'>
+    <Section className='md:py-0 py-0'>
+      <Section className=' text-oxfordBlue  md:py-0 py-0 bg-services '>
         <Container className='text-center sm:p-0 max-w-max not-prose py-0'>
           <OurServices />
         </Container>

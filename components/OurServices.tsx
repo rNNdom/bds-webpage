@@ -11,7 +11,7 @@ export default function OurServices() {
     <Section className='text-oxfordBlue  md:pt-0 pb-0 md:pb-0 not-prose py-0'>
       <Container className='max-w-full p-0 sm:p-0 mx-0'>
         <div className='flex flex-row items-center justify-center gap-5 services-section'>
-          <div className='md:w-1/2 flex flex-col items-start gap-5 ml-44'>
+          <div className='md:w-1/2 flex flex-col items-start gap-5 ml-44 pt-8'>
             <SectionTitle>Servicios</SectionTitle>
 
             <p className='mb-4'>
