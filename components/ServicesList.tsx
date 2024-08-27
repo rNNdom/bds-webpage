@@ -73,7 +73,7 @@ const ServicesList = () => {
                       <Card key={index} className='flex flex-col md:flex-row py-4 gap-4 items-center text-white my-6 border-0 border-t-[1px] rounded-none bg-transparent'>
                         <div className='bg-white p-2 rounded-lg flex border-bgGreenColor border '>
                           <span className='relative min-w-[95px] max-w-[95px] min-h-[95px] max-h-[95px] '>
-                            <Image src={item.image} alt={item.title} fill objectFit='contain' />
+                            <Image src={item.image} alt={item.title} fill className='object-contain' />
                           </span>
                         </div>
                         <span className='p-3 flex flex-grow flex-col items-center md:items-start text-center md:text-start '>

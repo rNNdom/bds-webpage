@@ -5,9 +5,8 @@ import { teamLeadersList } from './teamLeadersList'
 export default function TeamLeaders() {
   return (
     <Section className='relative z-50 pt-0 text-oxfordBlue  md:pt-0 pb-0 md:pb-0 not-prose'>
-      <Container className='text-center sm:p-0 not-prose items-center flex flex-col p-0'>
+      <Container className='text-center sm:p-0 not-prose items-center flex flex-col p-0 border-b'>
         <SectionTitle>Líderes de equipo</SectionTitle>
-        <p className='text-muted-foreground text-lg mt-4'>Con la colaboracion de mas de 30 profesionales de datos</p>
         <div className=' grid grid-cols-1 md:grid-cols-3 my-8 gap-10 '>
           {teamLeadersList.map((leader, index) => (
             <div
@@ -21,17 +20,21 @@ export default function TeamLeaders() {
                   sizes={'165'}
                   width={165}
                   height={165}
-                  className='rounded-full border-b-[5px] border-bgDarkGreen bg-bds-background-gradient-1  pt-1 object-contain'
+                  priority
+                  className='rounded-full bg-bds-background-gradient-1 object-cover'
                 />
               </span>
-              <span className='flex flex-col items-center justify-center mt-4 w-[50%]'>
-                <p className='font-bold text-lg truncate'>{leader.name}</p>
+              <span className='flex flex-col items-center justify-center md:border-t w-[60%] md:w-full'>
+                <p className='font-bold text-lg truncate pt-2'>{leader.name}</p>
                 <p className='text-sm text-muted-foreground mt-2 w-[80%]'>{leader.description}</p>
-                <p className='text-muted-foreground text-sm pt-5'>{leader.businessSeal}</p>
+                <br />
+                <span className='border-t w-full pb-1 block md:hidden'></span>
+                <p className='text-muted-foreground text-sm'>{leader.businessSeal}</p>
               </span>
             </div>
           ))}
         </div>
+        <p className='text-muted-foreground text-lg mt-4 '>Con la colaboracion de mas de 30 profesionales de datos</p>
       </Container>
     </Section>
   )

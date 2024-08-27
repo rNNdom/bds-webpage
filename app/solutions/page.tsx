@@ -25,7 +25,7 @@ export default function page() {
 
       <Section className='bg-parent-solutions md:py-0 py-0'>
         <div className='text-white not-prose bg-bds-background-gradient-1 bg-cover py-24 flex flex-col items-center'>
-          <SectionTitle>Soluciones Implementadas </SectionTitle>
+          <SectionTitle>Soluciones implementadas</SectionTitle>
         </div>
 
         <div className='md:py-10 text-oxfordBlue  bg-bgGreenColor'>

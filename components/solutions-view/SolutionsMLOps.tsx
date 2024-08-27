@@ -9,7 +9,7 @@ import SectionTitle from '../SectionTitle'
 export default function SolutionsMLOps() {
   return (
     <Section className='relative z-10 text-oxfordBlue  md:pt-0 pb-0 md:pb-0 not-prose'>
-      <Container className='text-center not-prose'>
+      <Container className='p-2 text-center not-prose'>
         <div className='flex flex-col-reverse md:flex-row-reverse items-center justify-around'>
           <div>
             <Image src={MLOps} alt='Imágen del proceso correspondiente a MLOps' className='object-contain ' unoptimized placeholder='blur' />

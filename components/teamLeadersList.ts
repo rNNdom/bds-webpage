@@ -1,12 +1,12 @@
-import FelipeAlvarez from '@/public/team-leaders/felipe_alvarez.webp'
-import GabrielTorres from '@/public/team-leaders/gabriel_torres.webp'
-import GustavoVeliz from '@/public/team-leaders/gustavo_veliz.webp'
-import HernanMori from '@/public/team-leaders/hernan_mori.webp'
-import JaimeDiaz from '@/public/team-leaders/jaime_diaz.webp'
-import JaimeVera from '@/public/team-leaders/jaime_vera.webp'
-import JoaquinOrtiz from '@/public/team-leaders/joaquin_ortiz.webp'
-import JoseMasseti from '@/public/team-leaders/jose_masseti.webp'
-import LuisOsorio from '@/public/team-leaders/luis_osorio.webp'
+import FelipeAlvarez from '@/public/team-leaders/felipe_alvarez.png'
+import GabrielTorres from '@/public/team-leaders/gabriel_torres.png'
+import GustavoVeliz from '@/public/team-leaders/gustavo_veliz.png'
+import HernanMori from '@/public/team-leaders/hernan_mori.png'
+import JaimeSolis from '@/public/team-leaders/jaime_solis.png'
+import JaimeVera from '@/public/team-leaders/jaime_vera.png'
+import JoaquinOrtiz from '@/public/team-leaders/joaquin_ortiz.png'
+import JoseMasseti from '@/public/team-leaders/jose_masseti.png'
+import LuisOsorio from '@/public/team-leaders/luis_osorio.png'
 
 export const teamLeadersList = [
   {
@@ -40,10 +40,10 @@ export const teamLeadersList = [
     image: LuisOsorio
   },
   {
-    name: 'Jaime Díaz',
+    name: 'Jaime Solís',
     description: 'Human Resources',
     businessSeal: 'BDS SpA',
-    image: JaimeDiaz
+    image: JaimeSolis
   },
   {
     name: 'Gabriel Torres',
