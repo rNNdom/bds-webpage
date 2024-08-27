@@ -175,6 +175,21 @@
     .hidden-client-text {
       display: none;
     }
+    .services-list-accordion {
+      padding: 0 !important;
+      border-radius: 0% !important;
+    }
+    .services-list-accordion > div {
+      padding: 5px !important;
+      border-radius: 0% !important;
+    }
+
+    .team-leaders-column {
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: center !important;
+      justify-content: center !important;
+    }
   }
   @media (width <= 290px) {
     .column-minimum-width {
@@ -200,10 +215,7 @@
       align-items: center;
       justify-content: center;
     }
-    .team-leaders-section > img {
-      width: 50%;
-      border-radius: 50%;
-    }
+
     .ts-hidden-property {
       display: none;
     }

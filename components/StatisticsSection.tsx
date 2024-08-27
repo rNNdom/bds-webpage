@@ -3,6 +3,7 @@ import { Container } from './craft'
 import IconCert from '@/public/about-us/icon_certs.svg'
 import IconCoolab from '@/public/about-us/icon_coolabs.svg'
 import IconProyects from '@/public/about-us/icon_proyects.svg'
+import IconMembers from '@/public/about-us/icon-members.svg'
 import Image, { StaticImageData } from 'next/image'
 type StatsType = {
   image: StaticImageData
@@ -11,9 +12,9 @@ type StatsType = {
 }[]
 function StatisticsSection() {
   const stats: StatsType = [
-    { number: '+50', text: '[Integrantes BDS]', image: IconCoolab },
+    { number: '+30', text: 'Data Workers', image: IconMembers },
     { number: '+200', text: 'Proyectos exitosos', image: IconProyects },
-    { number: '+50', text: 'Clientes satisfechos', image: IconCert },
+    { number: '+50', text: 'Clientes satisfechos', image: IconCoolab },
     { number: '+50', text: 'Colaboradores certificados', image: IconCert }
   ]
   return (
