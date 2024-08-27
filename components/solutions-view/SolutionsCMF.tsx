@@ -8,7 +8,7 @@ import SectionTitle from '../SectionTitle'
 export default function SolutionsCMF() {
   return (
     <Section className='relative z-10 text-oxfordBlue md:pt-0 pb-0 md:pb-0 not-prose '>
-      <Container className='text-center not-prose'>
+      <Container className='p-2 text-center not-prose'>
         <div className='flex flex-col md:flex-row-reverse items-center justify-around'>
           <div className='pl-0 md:pl-10 w-full md:w-3/6 '>
             <span className='flex justify-start w-full'>

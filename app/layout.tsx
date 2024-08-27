@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 
 import './globals.css'
 
-import { Container, Main, Section } from '@/components/craft'
+import { Container, Layout, Main, Section } from '@/components/craft'
 import { MobileNav } from '@/components/nav/mobile-nav'
 import { Button } from '@/components/ui/button'
 import { mainMenu } from '@/menu.config'
@@ -28,14 +28,14 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang='en' suppressHydrationWarning>
+    <Layout>
       <head />
       <body className={cn('min-h-screen antialiased', roboto.className)}>
         <Nav />
         <Main>{children}</Main>
         <Footer />
       </body>
-    </html>
+    </Layout>
   )
 }
 
