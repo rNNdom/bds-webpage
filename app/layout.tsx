@@ -22,7 +22,7 @@ const roboto = Roboto({
 })
 
 export const metadata: Metadata = {
-  title: 'BDS SpA',
+  title: 'BDS Chile - Consultoría',
   description: 'Consultora BDS Chile 2024, expertos en Business Intelligence, Big Data.'
 }
 
