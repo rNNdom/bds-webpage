@@ -25,7 +25,7 @@ export default function PartnersSection() {
       icon: <Image className='object-contain h-28' src={Abitech} alt='Icono de Abitech' width={500} height={500} />,
       title: 'ABITech',
       description:
-        'Abitech es una empresa dedicada a <strong>generar soluciones personalizadas y avanzas en el mundo de la automatización y digitalizacion de procesos administrativos </strong>. <br/> <br/> Desde el 2023 se creó esta alianza estratégica para poder <strong> ofrecer soluciones mas robustas dentro del ambito de la automatizacion y los datos</strong>.',
+        'Abitech es una empresa dedicada a <strong>generar soluciones personalizadas y avanzas en el mundo de la automatización y digitalización de procesos administrativos.</strong> <br/> <br/> Desde el 2023 se creó esta alianza estratégica para poder <strong> ofrecer soluciones mas robustas dentro del ambito de la automatizacion y los datos</strong>.',
       href: 'https://abitech.cl/nosotros/'
     }
   ]

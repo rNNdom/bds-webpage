@@ -7,7 +7,7 @@ export default function TeamLeaders() {
     <Section className='relative z-50 pt-0 text-oxfordBlue  md:pt-0 pb-0 md:pb-0 not-prose'>
       <Container className='text-center sm:p-0 not-prose items-center flex flex-col p-0 border-b'>
         <SectionTitle>Líderes de equipo</SectionTitle>
-        <div className=' grid grid-cols-1 md:grid-cols-3 my-8 gap-10 '>
+        <div className=' grid grid-cols-1 md:grid-cols-3 my-8 gap-10'>
           {teamLeadersList.map((leader, index) => (
             <div
               key={index}
@@ -34,7 +34,7 @@ export default function TeamLeaders() {
             </div>
           ))}
         </div>
-        <p className='text-muted-foreground text-lg mt-4 '>Con la colaboracion de mas de 30 profesionales de datos</p>
+        <p className='text-muted-foreground text-lg mt-4 '>Con la colaboración de mas de 30 profesionales de datos</p>
       </Container>
     </Section>
   )

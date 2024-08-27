@@ -15,6 +15,7 @@ import Link from 'next/link'
 
 import { cn } from '@/lib/utils'
 import { Roboto } from 'next/font/google'
+import ToastProvider from '@/components/ToastWrapper'
 
 const roboto = Roboto({
   weight: ['100', '300', '400', '500', '700', '900'],
@@ -32,7 +33,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head />
       <body className={cn('min-h-screen antialiased', roboto.className)}>
         <Nav />
-        <Main>{children}</Main>
+        <ToastProvider>
+          <Main>{children}</Main>
+        </ToastProvider>
         <Footer />
       </body>
     </Layout>
@@ -44,7 +47,7 @@ const Nav = ({ className, children, id }: NavProps) => {
     <nav className={cn('sticky z-50 top-0 bg-bgBlueColor border-bgBlueColor', 'border-b', 'fade-in', className)} id={id}>
       <div id='nav-container' className='max-w-5xl mx-auto px-4 sm:px-4 flex justify-between items-center text-white'>
         <Link className='hover:opacity-75 transition-all flex gap-2 items-center h-24 w-40 relative' href='/'>
-          <Image src={BDSLOGO1} alt='Logo' fill className='object-contain' />
+          <Image src={BDSLOGO1} alt='Logo' fill className='object-contain' priority sizes='20vh' />
         </Link>
         {children}
         <div className='flex items-center gap-10 '>
