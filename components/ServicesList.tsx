@@ -34,7 +34,7 @@ const ServicesList = () => {
 
   return (
     <Section className='md:py-0 services-list-accordion'>
-      <Container>
+      <Container className='sm:p-4'>
         <div className='mt-4 flex flex-col gap-4 md:mt-8 '>
           {ServicesContent.map((service, index) => (
             <Accordion

@@ -12,7 +12,7 @@ type StatsType = {
 }[]
 function StatisticsSection() {
   const stats: StatsType = [
-    { number: '+50', text: '[Integrantes BDS]', image: IconMembers },
+    { number: '+30', text: 'Data Workers', image: IconMembers },
     { number: '+200', text: 'Proyectos exitosos', image: IconProyects },
     { number: '+50', text: 'Clientes satisfechos', image: IconCoolab },
     { number: '+50', text: 'Colaboradores certificados', image: IconCert }

@@ -10,9 +10,9 @@ export default function page() {
           <OurServices />
         </Container>
       </Section>
-      <Section className=' bg-bds-background-gradient-1 text-white pt-10 md:py-0 '>
+      <Section className=' bg-bds-background-gradient-1 text-white pt-0 md:py-0 '>
         <div className='bg-bds-background-texture-1 bg-cover bg-no-repeat border-b border-bgGreenColor'>
-          <Container className='not-prose services-list-accordion '>
+          <Container className='not-prose services-list-accordion sm:p-8'>
             <ServicesList />
           </Container>
         </div>
