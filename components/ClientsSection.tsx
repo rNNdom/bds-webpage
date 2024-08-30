@@ -93,7 +93,7 @@ export function ClientsSection() {
                   <Card className='w-[50vw] md:w-[100%] '>
                     <CardContent className='flex aspect-square w-full p-2 sm:p-6  flex-col justify-around'>
                       <span className='h-2/3 flex items-center justify-center'>
-                        <Image src={item.image} alt={item.alt} className={item.style} />
+                        <Image unoptimized src={item.image} alt={item.alt} className={item.style} />
                       </span>
                       <p className='hidden-client-text text-oxfordBlue font-bold text-xl text-center '>
                         <Balancer>{item.label}</Balancer>

@@ -9,7 +9,7 @@ export default function AboutUs() {
       <Container className='max-w-full p-0 sm:p-0 mx-0'>
         <div className='flex about-us flex-row items-center gap-4 justify-between'>
           <div className='py-4 md:py-0 md:pb-0 h-[40vw] relative w-[70%] '>
-            <Image src={HeroImage} alt='Personas chocando puños representando trabajo en equipo' className='image-box object-cover rounded-br-[700px]' placeholder='blur' unoptimized priority fill />
+            <Image unoptimized src={HeroImage} alt='Personas chocando puños representando trabajo en equipo' className='image-box object-cover rounded-br-[700px]' placeholder='blur' priority fill />
           </div>
           <div className='md:w-1/2  '>
             <div className='sm:w-[90%]'>

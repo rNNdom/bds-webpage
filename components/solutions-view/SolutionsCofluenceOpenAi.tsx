@@ -12,7 +12,7 @@ export default function SolutionsCofOpenAI() {
       <Container className='p-2 text-center not-prose'>
         <div className='flex flex-col-reverse md:flex-row-reverse items-center justify-around'>
           <div>
-            <Image src={Logo} alt='placeholder' className='object-contain' placeholder='blur' unoptimized />
+            <Image unoptimized src={Logo} alt='placeholder' className='object-contain' placeholder='blur' />
           </div>
           <div className='pr-0 md:pr-10 w-full md:w-4/6 '>
             <span className='flex justify-start  w-full'>

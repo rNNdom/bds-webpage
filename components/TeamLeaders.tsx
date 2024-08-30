@@ -15,6 +15,7 @@ export default function TeamLeaders() {
             >
               <span className='flex justify-center max-w-[165px] max-h-[165px]'>
                 <Image
+                  unoptimized
                   src={leader.image}
                   alt={`Líder de célula en empresa BDS SpA`}
                   sizes={'165'}

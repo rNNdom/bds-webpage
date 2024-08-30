@@ -12,12 +12,12 @@ export default function page() {
     <Section className='md:py-0 py-0'>
       <Section className=' not-prose md:py-0 relative h-[600px]'>
         <Image
+          unoptimized
           src={SolutionsImage}
           alt='Mujer analizando datos en un computador.'
           className='object-cover'
           fill
           priority
-          unoptimized
           placeholder='blur'
           sizes='(max-width: 1080px) 100vw, (max-width: 768) 75vw, 50vw'
         />

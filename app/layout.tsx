@@ -30,7 +30,10 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <Layout>
-      <head />
+      <head>
+        <link rel='icon' href='/favicon.ico' />
+        <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1' />
+      </head>
       <body className={cn('min-h-screen antialiased', roboto.className)}>
         <Nav />
         <ToastProvider>
@@ -47,7 +50,7 @@ const Nav = ({ className, children, id }: NavProps) => {
     <nav className={cn('sticky z-50 top-0 bg-bgBlueColor border-bgBlueColor', 'border-b', 'fade-in', className)} id={id}>
       <div id='nav-container' className='max-w-5xl mx-auto px-4 sm:px-4 flex justify-between items-center text-white'>
         <Link className='hover:opacity-75 transition-all flex gap-2 items-center h-24 w-40 relative' href='/'>
-          <Image src={BDSLOGO1} alt='Logo' fill className='object-contain' priority sizes='20vh' />
+          <Image unoptimized src={BDSLOGO1} alt='Logo' fill className='object-contain' priority sizes='20vh' />
         </Link>
         {children}
         <div className='flex items-center gap-10 '>
@@ -75,7 +78,7 @@ const Footer = () => {
         <Container className='grid md:grid-cols-[1.5fr_0.5fr_0.5fr] '>
           <div className='flex flex-col gap-6 not-prose'>
             <Link className='flex w-fit' href='/'>
-              <Image src={BDS3} alt='Logo' width={150} height={150} className='dark:invert hover:opacity-75 transition-all' />
+              <Image unoptimized src={BDS3} alt='Logo' width={150} height={150} className='dark:invert hover:opacity-75 transition-all' />
             </Link>
             <p className='font-medium text-slate-400'>
               <Balancer>{metadata.title}</Balancer>
@@ -95,7 +98,7 @@ const Footer = () => {
         </Container>
         <Container className='border-t not-prose flex flex-col md:flex-row md:gap-2 gap-6 justify-between md:items-center'>
           <p className='text-gray-200'>
-            © <a href='https://9d8.dev'>BDS SpA</a>. Todos los derechos reservados.
+            © <a href='https://bdschile.cl'>BDS SpA</a>. Todos los derechos reservados.
           </p>
         </Container>
       </Section>

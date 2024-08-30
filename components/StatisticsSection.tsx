@@ -23,7 +23,7 @@ function StatisticsSection() {
         {stats.map((stat, index) => (
           <div key={index} className='flex flex-col  items-center  py-3 md:py-2'>
             <span className='w-16 h-16 flex items-center justify-center mb-2'>
-              <Image src={stat.image} alt={stat.text} style={{ objectFit: 'contain', height: 60, width: 60 }} />
+              <Image unoptimized src={stat.image} alt={stat.text} style={{ objectFit: 'contain', height: 60, width: 60 }} />
             </span>
             <h3 className='text-3xl font-bold mr-3'>{stat.number}</h3>
             <p className='font-bold text-xl'>{stat.text}</p>

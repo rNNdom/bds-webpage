@@ -13,7 +13,7 @@ export default function OurMission() {
 
         <div className='flex flex-col md:flex-row-reverse items-center gap-7 md:gap-0'>
           <span className='not-prose flex w-5/12 sm:w-3/12 justify-center'>
-            <Image src={logo_mision} alt='Imágen que muestra un destino, misión' className='w-48 h-48' />
+            <Image unoptimized src={logo_mision} alt='Imágen que muestra un destino, misión' className='w-48 h-48' />
           </span>
           <span className='not-prose flex w-4/5'>
             <p className='text-xl text-justify md:text-start '>

@@ -41,7 +41,7 @@ export default function TechnologiesList() {
                     {service.contentList.map((item, index) => (
                       <Card key={index} className='flex flex-col p-2 gap-1 items-center text-oxfordBlue m-3 justify-center border'>
                         <span className='w-28 h-28 flex items-center justify-center'>
-                          <Image src={item.image} alt={item.title} className='object-contain' width={80} height={80} />
+                          <Image unoptimized src={item.image} alt={item.title} className='object-contain' width={80} height={80} />
                         </span>
                         <p className='font-bold text-lg pb-4 text-center'>{item.title}</p>
                       </Card>

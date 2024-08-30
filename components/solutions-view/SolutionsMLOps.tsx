@@ -12,7 +12,7 @@ export default function SolutionsMLOps() {
       <Container className='p-2 text-center not-prose'>
         <div className='flex flex-col-reverse md:flex-row-reverse items-center justify-around'>
           <div>
-            <Image src={MLOps} alt='Imágen del proceso correspondiente a MLOps' className='object-contain ' unoptimized placeholder='blur' />
+            <Image unoptimized src={MLOps} alt='Imágen del proceso correspondiente a MLOps' className='object-contain ' placeholder='blur' />
           </div>
           <div className='pr-0 md:pr-10 w-full md:w-5/6 '>
             <span className='flex justify-start  w-full'>

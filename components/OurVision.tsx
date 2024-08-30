@@ -25,7 +25,7 @@ export default function OurVision() {
             </p>
           </span>
           <span className='not-prose flex w-5/12 sm:w-3/12 justify-center'>
-            <Image src={logo_vision} alt='Logo que muestra una persona en la retina de un ojo, visión' className=' w-48 h-48' />
+            <Image unoptimized src={logo_vision} alt='Logo que muestra una persona en la retina de un ojo, visión' className=' w-48 h-48' />
           </span>
         </div>
       </Container>

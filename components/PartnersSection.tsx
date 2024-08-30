@@ -15,14 +15,14 @@ export default function PartnersSection() {
 
   const featureText: FeatureText[] = [
     {
-      icon: <Image className='object-contain w-28 h-28' src={Cloudera} alt='Icono de CloudEra' />,
+      icon: <Image unoptimized className='object-contain w-28 h-28' src={Cloudera} alt='Icono de CloudEra' />,
       title: 'Cloudera',
       description:
         '<p> Cloudera es una empresa líder en el desarrollo de plataformas de datos y análisis, reconocida globalmente por su innovación y capacidad para transformar datos en información valiosa. <br/> <br/> Como <strong>partner SELECT de Cloudera</strong>, hemos establecido una colaboración estratégica que nos permite ofrecer soluciones avanzadas y personalizadas de análisis de datos en el mercado chileno. Esta alianza fortalece nuestra capacidad para proporcionar <strong>herramientas de vanguardia</strong> y <strong>soporte especializado</strong> para  tomar <strong>decisiones informadas</strong> basadas en datos precisos y oportunos.</p>',
       href: 'https://www.cloudera.com/'
     },
     {
-      icon: <Image className='object-contain h-28' src={Abitech} alt='Icono de Abitech' width={500} height={500} />,
+      icon: <Image unoptimized className='object-contain h-28' src={Abitech} alt='Icono de Abitech' width={500} height={500} />,
       title: 'ABITech',
       description:
         'Abitech es una empresa dedicada a <strong>generar soluciones personalizadas y avanzas en el mundo de la automatización y digitalización de procesos administrativos.</strong> <br/> <br/> Desde el 2023 se creó esta alianza estratégica para poder <strong> ofrecer soluciones mas robustas dentro del ambito de la automatizacion y los datos</strong>.',

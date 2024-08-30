@@ -24,7 +24,16 @@ export default function OurServices() {
             </p>
           </div>
           <div className='not-prose py-4 md:py-0 md:pb-0 h-[40vw] relative w-[70%] rounded-full '>
-            <Image src={ServicesImage} alt='Mujer dando una charla frente a gente.' className='services-image-box object-cover rounded-bl-[700px]' placeholder='blur' sizes='95vw' priority fill />
+            <Image
+              unoptimized
+              src={ServicesImage}
+              alt='Mujer dando una charla frente a gente.'
+              className='services-image-box object-cover rounded-bl-[700px]'
+              placeholder='blur'
+              sizes='95vw'
+              priority
+              fill
+            />
           </div>
         </div>
       </Container>

@@ -25,6 +25,7 @@ const IntialSection = () => {
           <div>
             <div className='flex not-prose max-h-[800px] items-center max-w-[1000px] w-[100%] overflow-hidden justify-center md:justify-normal pt-4 md:pt-0 md:pb-0'>
               <Image
+                unoptimized
                 src={LANDINGIMAGE}
                 alt='Mujer analizando datos en un computador'
                 className=' image-rounded max-w-[150%] rounded-bl-[500px] rounded-tl-[500px]'

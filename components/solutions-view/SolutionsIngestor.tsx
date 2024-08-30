@@ -24,7 +24,7 @@ export default function SolutionsIngestor() {
             </p>
           </div>
           <div>
-            <Image src={Ingestador} alt='Icono de un proceso de ingestación de datos' className='object-contain fill bg-white border-2' unoptimized placeholder='blur' />
+            <Image unoptimized src={Ingestador} alt='Icono de un proceso de ingestación de datos' className='object-contain fill bg-white border-2' placeholder='blur' />
           </div>
         </div>
       </Container>
