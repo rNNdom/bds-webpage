@@ -13,9 +13,9 @@ import BDSLOGO1 from '@/public/BDSLOGO1.png'
 import Image from 'next/image'
 import Link from 'next/link'
 
+import ToastProvider from '@/components/ToastWrapper'
 import { cn } from '@/lib/utils'
 import { Roboto } from 'next/font/google'
-import ToastProvider from '@/components/ToastWrapper'
 
 const roboto = Roboto({
   weight: ['100', '300', '400', '500', '700', '900'],
@@ -24,16 +24,22 @@ const roboto = Roboto({
 
 export const metadata: Metadata = {
   title: 'BDS Chile - Consultoría',
-  description: 'Consultora BDS Chile 2024, expertos en Business Intelligence, Big Data.'
+  description: 'Consultora BDS Chile 2024, expertos en Business Intelligence, Big Data.',
+  icons: {
+    icon: '/favicon.ico'
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'es_CL',
+    url: 'https://bdschile.cl',
+    siteName: 'BDS Chile'
+  },
+  keywords: ['Consultora', 'BDS SpA', 'Business Intelligence', 'Consultora Datos', 'Big Data', 'Data Science', 'Data Engineering']
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <Layout>
-      <head>
-        <link rel='icon' href='/favicon.ico' />
-        <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1' />
-      </head>
       <body className={cn('min-h-screen antialiased', roboto.className)}>
         <Nav />
         <ToastProvider>
