@@ -11,7 +11,7 @@ const IntialSection = () => {
           <div className='flex flex-col items-end  py-4'>
             <div className='flex md:w-2/3 w-full flex-col gap-6 '>
               <span className='text-3xl text-center md:text-start'>
-                Te ayudamos a desarrollar tu <p className='font-bold'>Estrategia de datos, Machine Learning e Inteligencia Artificial</p>
+                Te ayudamos a desarrollar tu <p className='font-bold'>Estrategia de datos, Machine Learning e Inteligencia Artificial, TEXTO PRUEBA</p>
               </span>
               <div className='not-prose flex gap-2 justify-center md:justify-start'>
                 <Button className='w-fit bg-buttonTealColor rounded-xl font-bold h-14' asChild>
