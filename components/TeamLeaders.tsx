@@ -35,7 +35,7 @@ export default function TeamLeaders() {
             </div>
           ))}
         </div>
-        <p className='text-muted-foreground text-lg mt-4 '>Con la colaboración de mas de 30 profesionales de datos</p>
+        <p className='text-muted-foreground text-lg mt-4 '>¡Con la colaboración de mas de 30 de nuestros Data Workers!</p>
       </Container>
     </Section>
   )

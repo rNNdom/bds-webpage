@@ -1,6 +1,6 @@
 import React from 'react'
 import { Container, Section } from '@/components/craft'
-import CMFImage from '@/public/solutions-icons/CMF.webp'
+import CMFImage from '@/public/solutions-icons/CMF-crop.png'
 import Balancer from 'react-wrap-balancer'
 import Image from 'next/image'
 import SectionTitle from '../SectionTitle'

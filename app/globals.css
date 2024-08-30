@@ -171,7 +171,7 @@
     background-repeat: no-repeat;
     background-position: center;
   }
-  @media (width <= 420px) {
+  @media (device-width <= 420px) {
     .hidden-client-text {
       display: none;
     }
@@ -191,7 +191,7 @@
       justify-content: center !important;
     }
   }
-  @media (width <= 290px) {
+  @media (device-width <= 290px) {
     .column-minimum-width {
       flex-direction: column !important;
       display: flex !important;
@@ -203,7 +203,7 @@
       text-align: center;
     }
   }
-  @media (width <= 550px) {
+  @media (device-width <= 550px) {
     .team-leaders-section {
       display: flex;
       flex-direction: row;
@@ -226,7 +226,7 @@
     }
   }
 
-  @media (width <= 768px) {
+  @media (device-width <= 768px) {
     .image-rounded {
       width: 80%;
       border-radius: 4%;
@@ -234,7 +234,7 @@
     }
   }
 
-  @media (width <= 990px) {
+  @media (device-width <= 990px) {
     .image-box {
       width: 84%;
       border-radius: 0%;
@@ -271,7 +271,7 @@
       font-size: 1.25rem;
     }
   }
-  @media (width <= 1200px) {
+  @media (device-width <= 1200px) {
     .services-section {
       display: flex;
       flex-direction: column;
@@ -313,13 +313,13 @@
       box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.4);
     }
   }
-  @media (width >= 768px) {
+  @media (device-width >= 768px) {
     .container-height {
       height: 600px;
     }
   }
 
-  @media (width <= 600px) {
+  @media (device-width <= 600px) {
     .tech-columns {
       display: grid;
       grid-template-columns: 1fr;
