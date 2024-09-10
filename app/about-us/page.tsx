@@ -1,3 +1,10 @@
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Nosotros',
+  description: 'Conoce más sobre BDS Chile, nuestra historia, misión y el equipo de expertos que trabaja para llevar la tecnología a tu empresa.',
+  keywords: ['Consultora', 'Equipo de Expertos', 'Historia BDS Chile']
+}
 import AboutUs from '@/components/AboutUs'
 import ContactUs from '@/components/ContactUs'
 import { Container, Section } from '@/components/craft'

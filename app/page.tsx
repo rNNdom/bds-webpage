@@ -1,4 +1,10 @@
 // Craft Imports
+import { Metadata } from 'next'
+export const metadata: Metadata = {
+  title: 'BDS Chile - Consultoría',
+  description: 'Expertos en consultoría de TI: desarrollo de software, Business Intelligence, Big Data y Data Science. Soluciones innovadoras para impulsar tu negocio.',
+  keywords: ['BDS Chile', 'Consultoría', 'Desarrollo de Software', 'Business Intelligence', 'Big Data', 'Data Science', 'Data Engineering']
+}
 import { ClientsSection } from '@/components/ClientsSection'
 import { Container, Section } from '@/components/craft'
 import InitialSection from '@/components/InitialSection'

@@ -7,6 +7,7 @@ import { MobileNav } from '@/components/nav/mobile-nav'
 import { Button } from '@/components/ui/button'
 import { mainMenu } from '@/menu.config'
 import Balancer from 'react-wrap-balancer'
+import { GoogleAnalytics } from '@next/third-parties/google'
 
 import BDS3 from '@/public/BDS3.png'
 import BDSLOGO1 from '@/public/BDSLOGO1.png'
@@ -23,23 +24,28 @@ const roboto = Roboto({
 })
 
 export const metadata: Metadata = {
-  title: 'BDS Chile - Consultoría',
-  description: 'Consultora BDS Chile 2024, expertos en Business Intelligence, Big Data.',
-  icons: {
-    icon: '/favicon.ico'
+  title: {
+    template: '%s | BDS Chile - Consultoría',
+    default: 'BDS Chile - Consultoría'
   },
+  description: 'BDS Chile es una consultora de tecnología que ofrece servicios de consultoría, desarrollo de software y capacitación. Nuestro equipo de expertos te guiará en cada paso del proceso.',
   openGraph: {
     type: 'website',
     locale: 'es_CL',
     url: 'https://bdschile.cl',
     siteName: 'BDS Chile'
   },
-  keywords: ['Consultora', 'BDS SpA', 'Business Intelligence', 'Consultora Datos', 'Big Data', 'Data Science', 'Data Engineering']
+  keywords: ['Consultoría', 'BDS Chile', 'Business Intelligence', 'Consultora Datos', 'Desarrollo de Software', 'Ingeniería de datos', 'BDS SpA'],
+  metadataBase: new URL('https://bdschile.cl'),
+  
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <Layout>
+      <head>
+        <link rel='icon' href='/favicon.ico' />
+      </head>
       <body className={cn('min-h-screen antialiased', roboto.className)}>
         <Nav />
         <ToastProvider>
@@ -47,6 +53,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </ToastProvider>
         <Footer />
       </body>
+      <GoogleAnalytics gaId='G-X1NHZ3YWM6' />
     </Layout>
   )
 }
@@ -78,6 +85,8 @@ const Nav = ({ className, children, id }: NavProps) => {
 }
 
 const Footer = () => {
+  const title = typeof metadata.title === 'string' ? metadata.title : (metadata.title as { default: string }).default
+  const description = metadata.description
   return (
     <footer>
       <Section className='bg-bds-background-gradient-1 bg-cover text-white py-4 md:py-4'>
@@ -87,10 +96,10 @@ const Footer = () => {
               <Image unoptimized src={BDS3} alt='Logo' width={150} height={150} className='dark:invert hover:opacity-75 transition-all' />
             </Link>
             <p className='font-medium text-slate-400'>
-              <Balancer>{metadata.title}</Balancer>
+              <Balancer>{title}</Balancer>
             </p>
             <p className='text-gray-200'>
-              <Balancer>{metadata.description}</Balancer>
+              <Balancer>{description}</Balancer>
             </p>
           </div>
           <div className='flex flex-col gap-2 text-sm'>
