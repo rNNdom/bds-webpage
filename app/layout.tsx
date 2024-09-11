@@ -29,12 +29,6 @@ export const metadata: Metadata = {
     default: 'BDS Chile - Consultoría'
   },
   description: 'BDS Chile es una consultora de tecnología que ofrece servicios de consultoría, desarrollo de software y capacitación. Nuestro equipo de expertos te guiará en cada paso del proceso.',
-  openGraph: {
-    type: 'website',
-    locale: 'es_CL',
-    url: 'https://bdschile.cl',
-    siteName: 'BDS Chile'
-  },
   keywords: ['BDS', 'Consultoría', 'BDS Chile', 'Business Intelligence', 'Consultora Datos', 'Desarrollo de Software', 'Ingeniería de datos'],
   metadataBase: new URL('https://bdschile.cl')
 }
