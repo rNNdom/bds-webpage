@@ -29,8 +29,7 @@ export const metadata: Metadata = {
     default: 'BDS Chile - Consultoría'
   },
   description: 'BDS Chile es una consultora de tecnología que ofrece servicios de consultoría, desarrollo de software y capacitación. Nuestro equipo de expertos te guiará en cada paso del proceso.',
-  keywords: ['BDS', 'Consultoría', 'BDS Chile', 'Business Intelligence', 'Consultora Datos', 'Desarrollo de Software', 'Ingeniería de datos'],
-  metadataBase: new URL('https://bdschile.cl')
+  keywords: ['BDS', 'Consultoría', 'BDS Chile', 'Business Intelligence', 'Consultora Datos', 'Desarrollo de Software', 'Ingeniería de datos']
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
