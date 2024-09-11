@@ -4,7 +4,10 @@ export const metadata: Metadata = {
   title: 'Servicios',
   description:
     'Explora la gama de servicios especializados que ofrece BDS Chile. Desde desarrollo de software hasta análisis de datos avanzados, nuestro equipo de expertos está listo para impulsar tu negocio hacia el futuro digital.',
-  keywords: ['BDS Chile', 'Desarrollo de Software', 'Business Intelligence', 'Machine Learning', 'Ingeniería de Datos']
+  keywords: ['BDS Chile', 'Desarrollo de Software', 'Business Intelligence', 'Machine Learning', 'Ingeniería de Datos'],
+  alternates: {
+    canonical: 'https://bdschile.cl/services'
+  }
 }
 import { Container, Section } from '@/components/craft'
 import OurServices from '@/components/OurServices'

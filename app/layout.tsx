@@ -35,17 +35,13 @@ export const metadata: Metadata = {
     url: 'https://bdschile.cl',
     siteName: 'BDS Chile'
   },
-  keywords: ['Consultoría', 'BDS Chile', 'Business Intelligence', 'Consultora Datos', 'Desarrollo de Software', 'Ingeniería de datos', 'BDS SpA'],
-  metadataBase: new URL('https://bdschile.cl'),
-  
+  keywords: ['BDS', 'Consultoría', 'BDS Chile', 'Business Intelligence', 'Consultora Datos', 'Desarrollo de Software', 'Ingeniería de datos'],
+  metadataBase: new URL('https://bdschile.cl')
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <Layout>
-      <head>
-        <link rel='icon' href='/favicon.ico' />
-      </head>
       <body className={cn('min-h-screen antialiased', roboto.className)}>
         <Nav />
         <ToastProvider>

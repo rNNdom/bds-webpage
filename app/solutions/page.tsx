@@ -3,7 +3,10 @@ import { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Soluciones',
   description: 'Descubre las soluciones implementadas por BDS Chile, incluyendo CMF, MLOps, Ingestor y Cofluence OpenAI. Nuestro equipo de expertos te guiará en cada paso del proceso.',
-  keywords: ['Soluciones', 'CMF', 'MLOps', 'Ingestor', 'Cofluence OpenAI']
+  keywords: ['Soluciones', 'CMF', 'MLOps', 'Ingestor', 'Cofluence OpenAI'],
+  alternates: {
+    canonical: 'https://bdschile.cl/solutions'
+  }
 }
 import React from 'react'
 import { Container, Section } from '@/components/craft'
