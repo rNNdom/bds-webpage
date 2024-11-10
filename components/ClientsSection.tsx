@@ -12,6 +12,7 @@ import Balancer from 'react-wrap-balancer'
 import Cardif from '@/public/cardif.jpg'
 import ADRetail from '@/public/ADRetail.png'
 import CE from '@/public/Logo Coordinador Electrico.png'
+import Cencosud from '@/public/Cenco.png'
 import SectionTitle from './SectionTitle'
 
 const carrouselItems = [
@@ -31,27 +32,34 @@ const carrouselItems = [
   },
   {
     id: 3,
+    image: Cencosud,
+    alt: 'Logo Cencosud',
+    label: 'Cencosud',
+    style: 'object-contain w-[90%] h-[90%] '
+  },
+  {
+    id: 4,
     image: BCL,
     alt: 'Logo Banco de Chile',
     label: 'Banco de Chile',
     style: 'object-contain'
   },
   {
-    id: 4,
+    id: 5,
     image: Cardif,
     alt: 'Logo BNP Paribas',
     label: 'BNP Paribas',
     style: 'object-contain'
   },
   {
-    id: 5,
+    id: 6,
     image: ADRetail,
     alt: 'Logo AD Retail',
     label: 'AD Retail',
     style: 'object-contain'
   },
   {
-    id: 6,
+    id: 7,
     image: CE,
     alt: 'Logo Coordinador Electrico',
     label: 'Coordinador Electrico',

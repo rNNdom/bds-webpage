@@ -17,6 +17,7 @@ import Link from 'next/link'
 import ToastProvider from '@/components/ToastWrapper'
 import { cn } from '@/lib/utils'
 import { Roboto } from 'next/font/google'
+import LinkedinReference from '@/components/LinkedinReference'
 
 const roboto = Roboto({
   weight: ['100', '300', '400', '500', '700', '900'],
@@ -28,13 +29,23 @@ export const metadata: Metadata = {
     template: '%s | BDS Chile - Consultoría',
     default: 'BDS Chile - Consultoría'
   },
-  description: 'BDS Chile es una consultora de tecnología que ofrece servicios de consultoría, desarrollo de software y capacitación. Nuestro equipo de expertos te guiará en cada paso del proceso.',
-  keywords: ['BDS', 'Consultoría', 'BDS Chile', 'Business Intelligence', 'Consultora Datos', 'Desarrollo de Software', 'Ingeniería de datos']
+  description:
+    'En BDS te acompañamos en cada paso de tu evolución digital. Somos una consultora especializada en tecnología, desarrollo de software y capacitación, con un equipo de expertos listo para ayudarte a alcanzar tus objetivos.',
+  keywords: ['BDS', 'Consultoría', 'BDS Chile', 'Business Intelligence', 'Consultora Datos', 'Desarrollo de Software', 'Ingeniería de datos'],
+  metadataBase: new URL('https://bdschile.cl')
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <Layout>
+      <head>
+        <link rel='icon' type='image/png' href='/favicon-96x96.png' sizes='96x96' />
+        <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
+        <link rel='shortcut icon' href='/favicon.ico' />
+        <link rel='apple-touch-icon' sizes='180x180' href='/apple-touch-icon.png' />
+        <meta name='apple-mobile-web-app-title' content='BDS SpA' />
+        <link rel='manifest' href='/site.webmanifest' />
+      </head>
       <body className={cn('min-h-screen antialiased', roboto.className)}>
         <Nav />
         <ToastProvider>
@@ -98,6 +109,7 @@ const Footer = () => {
                 {key.charAt(0).toUpperCase() + key.slice(1)}
               </Link>
             ))}
+            <LinkedinReference />
           </div>
         </Container>
         <Container className='border-t not-prose flex flex-col md:flex-row md:gap-2 gap-6 justify-between md:items-center'>

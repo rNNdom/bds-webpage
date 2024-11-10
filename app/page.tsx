@@ -2,10 +2,11 @@
 import { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'BDS Chile - Consultoría',
-  description: 'Expertos en consultoría de TI: desarrollo de software, Business Intelligence, Big Data y Data Science. Soluciones innovadoras para impulsar tu negocio.',
-  keywords: ['BDS Chile', 'Consultoría', 'Desarrollo de Software', 'Business Intelligence', 'Big Data', 'Data Science', 'Data Engineering'],
+  description:
+    'Business Data Solutions (BDS SpA) es una consultora de tecnología que ofrece servicios de consultoría, desarrollo de software y capacitación. Nuestro equipo de expertos te guiará en cada paso del proceso.',
+  keywords: ['BDS Chile', 'Consultoría', 'Consultora', 'Business Intelligence', 'Big Data', 'DBS', 'Business Data Solutions', 'BDS Consultora', 'BDS'],
   alternates: {
-    canonical: 'https://bdschile.cl'
+    canonical: 'https://bdschile.cl/'
   }
 }
 import { ClientsSection } from '@/components/ClientsSection'
